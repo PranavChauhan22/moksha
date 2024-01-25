@@ -1,0 +1,88 @@
+.about{
+    background-color: #1e1330;
+    width: 100vw;
+    margin-top: -30px;
+    
+}
+.elements_popin {
+    margin-left: -25px;
+
+  }
+  
+  /* Additional styles for animations, you might need to import animate.css or define these animations in your project */
+
+  .about_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+
+ 
+
+
+  @media screen and (max-width:720px) {
+
+     
+      .hanging_2{
+        position: absolute;
+        height: 100px;
+        right: 0;
+      }
+      .MO{
+        height: 320px;
+      }
+  }
+  @media screen and (min-width:720px) {
+
+     
+      .hanging_2{
+        
+        position: absolute;
+        height: 300px;
+        right: 0;
+       
+      }
+   
+  }
+  .img_content_wrap{
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .content_head1_MO,.content_head2_MO{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .content_body1_MO,.content_body2_MO{
+    max-width: 500px;
+    font-weight: 600;
+    
+    color: white;
+  }
+  .content_body1_MO{
+    text-align: left;
+  }
+  .content_body2_MO{
+    text-align: right;
+  }
+  .content_head1_MO{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+
+  }
+  .content_head2_MO{
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .content_MO{
+    margin: 50px;
+    
+  }

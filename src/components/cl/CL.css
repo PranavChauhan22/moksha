@@ -1,0 +1,188 @@
+.cl_form{
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 #34cc98;
+    background-color: #ff6600;
+margin: 20px;  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 30px;
+
+}
+.CL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.cl_txt_ip{
+    padding:10px;
+    margin: 20px;
+    width: 200px;
+    
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.cl_txt_ip::placeholder{
+    color: white;
+    font-weight: bolder;
+}
+.cl_txt_dropdown{
+    padding:10px;
+    margin: 20px;
+    width: 220px;
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+.wrap_CL_inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.warning_drive_link{
+    font-weight: bolder;
+}
+
+.submit_cl{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: transparent;
+    font-weight: bolder;
+    width: 120px;
+    
+
+}
+.submit_cl:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+@media screen and (min-width:720px) {
+    .cl_txtarea_ip{
+        width: 440px;
+        margin-top: 20px;
+        height: 200px;
+        padding: 10px;
+    }
+    .cl_form{
+        width: 660px;
+    }
+    .cl_ele{
+        height: 500px;
+        margin: 30px;
+    }
+}
+@media screen and (max-width:720px) {
+    .cl_txtarea_ip{
+        width: 250px;
+        margin-top: 20px;
+        height: 200px;
+        padding: 10px;
+    }
+    .cl_form{
+        width: 280px;
+    }
+    .cl_ele{
+        height: 300px;
+        margin: 30px;
+    }
+}
+.cl_txtarea_ip{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.cl_txtarea_ip::placeholder{
+    color: white;
+    font-weight: bolder;
+}
+.cl_bg {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+
+    top: 0;
+    left: 0;
+   
+    
+}
+.cl_bg_1 {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+
+    top: 100vh;
+    left: 0;
+   
+    
+}
+
+.cl_head{
+    height: 80px;
+}
+.flex_cl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cl_eles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    
+}
+.cl_eles{
+    background-color: #dc79ba;
+    z-index: -1;
+    width: 100vw;
+    /* margin-top: 100px; */
+}
+.ping_cl{
+    /* margin-top: -65vh; */
+    z-index: -1;
+    width: 100vw;
+    
+}
+.approve_cl{
+    background-image: url('./bgs/approve.png');
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+}
+.mv_id{
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: -20px;
+}
+
+.ad_wrap{
+    background-color: #dc79ba;
+    width: 100vw;
+    /* max-width: 500px; */
+}
+.a_wr{
+height: 320px;
+margin: 30px;
+}

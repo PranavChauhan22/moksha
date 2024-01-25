@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Lato&display=swap');
+
+.MI_home_text{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.MI_home_text_2{
+    font-size: 40px;
+    font-weight: bolder;
+
+}
+.MI_home{
+    position: absolute;
+    color: white;
+    top: 15vh;
+    letter-spacing: 4px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    font-weight: bolder;
+
+    flex-direction: column;
+  
+}
+
+.gr{
+    width: 120vw;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+@media screen and (min-width:840px) {
+    .home_logo_a{
+        /* width: 320px; */
+        height: 150px;
+        margin: auto;
+    }
+    
+}
+@media screen and (max-width:840px) {
+    .home_logo_a{
+        /* width: 320px; */
+        height: 70px;
+        margin: auto;
+    }
+    
+}

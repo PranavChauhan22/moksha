@@ -1,0 +1,12 @@
+.cs_txt{
+    color: white;
+    letter-spacing: 10px;
+    font-size: 20px;
+    
+}
+.flex_cs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

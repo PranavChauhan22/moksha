@@ -1,0 +1,47 @@
+.register{
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 #34cc98;
+    background-color: #ff6600;
+  
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.email,.password,.username{
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.signup_btn{
+    width: 120px;
+    background-color: black;
+    color: white;
+    border: transparent;
+    padding: 10px;
+    margin: auto;
+    font-weight: bolder;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.google_signin{
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    width: 150px;
+    font-weight: bolder;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.error-register{
+    color: white;
+    font-size: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 250px;
+}

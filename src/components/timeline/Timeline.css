@@ -1,0 +1,32 @@
+.timeline{
+    background-color: #DC79BA;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.time_img{
+    height: 100vh;
+    margin-left: 20vw;
+    margin-top: 80px;
+}
+.head_txt{
+    height: 100px;
+    margin-left: 30px;
+    position: absolute;
+
+}
+.cds{
+    height: 90vh;
+    margin-top: 10vh;
+}
+.timeline::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .timeline {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
