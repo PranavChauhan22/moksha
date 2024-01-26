@@ -7,7 +7,7 @@
 .img_tv{
     width: 420px;
     margin-top: 30px;
-    min-width: 300px;
+    /* min-width: 300px; */
 }
 
 
@@ -57,7 +57,7 @@
     }
     
 .img_tv{
-    width: 180px;
+    width: 200px;
 }
     
 }
