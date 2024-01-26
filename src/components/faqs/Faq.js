@@ -21,7 +21,7 @@ function Faq() {
         {
           question:
             "When will Moksha - Innovision’24 be held ? What are the exact dates ?",
-          answer: "Moksha - Innovision is a 3 day annual cultural - tech extravaganza, organised in the month of March. The dates will be revealed soon",
+          answer: "Moksha - Innovision is a 3 day annual cultural - tech extravaganza, organised in the month of March. The dates will be revealed soon.",
           open: false
         },
         {
