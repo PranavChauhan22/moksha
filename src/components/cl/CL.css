@@ -164,7 +164,7 @@ padding: 30px;
     
 }
 .approve_cl{
-    background-image: url('./bgs/approve.png');
+    background-image: url('https://mokshainnovision.s3.eu-north-1.amazonaws.com/bgs/approve.png');
     background-size: cover;
     height: 300px;
     width: 300px;

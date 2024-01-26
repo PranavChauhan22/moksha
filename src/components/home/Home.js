@@ -2,15 +2,15 @@ import Spline from '@splinetool/react-spline'
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import "./Home.css"
-import {Zoom} from 'react-awesome-reveal'
+
 import 'animate.css';
-import hang1 from "../elements/hang_1.png";
-import gr from "./homegif.gif"
 import { FaAngleDoubleDown } from "react-icons/fa";
-import logo from "./ww_MV.png"
 
 
 function Home() {
+  const gr="https://mokshainnovision.s3.eu-north-1.amazonaws.com/homegif.gif";
+  const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/ww_MV.png";
+
   return (
     <div className='home'>
         <div className='MI_home'>

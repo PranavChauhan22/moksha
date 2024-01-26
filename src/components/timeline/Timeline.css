@@ -4,7 +4,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     white-space: nowrap;
-    overflow-x: scroll;
+    low-x: scroll;
 }
 .time_img{
     height: 100vh;

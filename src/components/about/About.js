@@ -1,20 +1,23 @@
 // About.js
 import React from "react";
 import "./About.css";
-import img1 from "../elements/1.png";
-import img2 from "../elements/2.png";
-import img3 from "../elements/3.png";
-import img4 from "../elements/4.png";
-import img5 from "../elements/5.png";
-import img6 from "../elements/6.png";
-import img7 from "../elements/7.png";
-import img8 from "../elements/8.png";
-import img9 from "../elements/9.png";
-import hang2 from "../elements/hang_2.png";
-import MO from "../images/MO.png";
+
+
 
 import { useWindowWidth } from "@react-hook/window-size";
 function About() {
+  const img1="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/1.png";
+  const img2="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/2.png";
+  const img3="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/3.png";
+  const img4="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/4.png";
+  const img5="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/5.png";
+  const img6="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/6.png";
+  const img7="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/7.png";
+  const img8="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/8.png";
+  const img9="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/9.png";
+  const hang2="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/hang_2.png";
+  const MO="https://mokshainnovision.s3.eu-north-1.amazonaws.com/MO.png";
+  
   const onlywidth = useWindowWidth();
   return (
     <div className="about" id="about">

@@ -3,9 +3,9 @@ import "./Faq.css";
 import FAQs from "./FAQs";
 
 function Faq() {
-  const hang1="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elements/1.png"
-  const head="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elements/2.png"
-  const hang2="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elements/3.png"
+  const hang1="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsFAQ/1.png"
+  const head="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsFAQ/2.png"
+  const hang2="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsFAQ/3.png"
     const [faqs, setFaqs] = useState([
         {
           question: "What is Moksha?",

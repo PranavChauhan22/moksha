@@ -6,11 +6,11 @@ import Modal from "react-modal";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 
 import "./signup.css";
-import logo from "../images/mokshalogo.png"
 import axios from "axios";
 import Loader from "../loader/Loader";
 
 const SignUpModal = ({ isOpen, onClose }) => {
+  const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/mokshalogo.png";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");

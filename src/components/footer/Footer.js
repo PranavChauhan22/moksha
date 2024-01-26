@@ -2,9 +2,9 @@ import React from "react";
 import "./Footer.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import hang1 from "../elements/hang_1.png";
-import hang2 from "../elements/hang_3.png";
 function Footer() {
+  const hang1="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/hang_1.png";
+  const hang2="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/hang_3.png";
   return (
     <div className="footerbg" id="footer">
       <div className="footer">

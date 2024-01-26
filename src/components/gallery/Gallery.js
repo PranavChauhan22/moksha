@@ -6,12 +6,12 @@ import { FaRegHandPointLeft } from "react-icons/fa";
 import { FaRegHandPointRight } from "react-icons/fa";
 
 function Gallery() {
-  const cf="https://mokshainnovision.s3.eu-north-1.amazonaws.com/strips/cf.png";
-  const vc="https://mokshainnovision.s3.eu-north-1.amazonaws.com/strips/vc.png";
+  const cf="https://mokshainnovision.s3.eu-north-1.amazonaws.com/stripsG/cf.png";
+  const vc="https://mokshainnovision.s3.eu-north-1.amazonaws.com/stripsG/vc.png";
   const pink =
   "https://mokshainnovision.s3.eu-north-1.amazonaws.com/bgs/pink.png";
-  const strip_b="https://mokshainnovision.s3.eu-north-1.amazonaws.com/strips/gallery_ele.png";
-  const strip_a="https://mokshainnovision.s3.eu-north-1.amazonaws.com/strips/gallery_strip.png";
+  const strip_b="https://mokshainnovision.s3.eu-north-1.amazonaws.com/stripsG/gallery_ele.png";
+  const strip_a="https://mokshainnovision.s3.eu-north-1.amazonaws.com/stripsG/gallery_strip.png";
   const [id, setid] = useState(0)
   const [arrow, setarrow] = useState(id == 0 ? 4 : 12);
   const identify=(p)=>{
@@ -60,7 +60,7 @@ function Gallery() {
           <img src={strip_a} className="strip_a_a" />
           <div className="tv_l_r">
             <img src={vc} className="vc" onClick={()=>identify(0)} />
-            <img src={require(`./vibe/${arrow}.png`)} className="img_tv" />
+            <img src={`https://mokshainnovision.s3.eu-north-1.amazonaws.com/vibeG/${arrow}.png`} className="img_tv" />
             <img src={cf} className="cf" onClick={()=>identify(1)} />
           </div>
           <div className="arrows_gal">

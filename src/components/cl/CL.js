@@ -1,23 +1,25 @@
 import { jwtDecode } from "jwt-decode";
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
-import logo from "../images/mokshalogo.png";
-import head from "./strips/cl_strip.png";
-import bg from "./bgs/cl_bg.png";
+
 
 import "./CL.css";
-import ele1 from "./elements/1.png";
-import ele2 from "./elements/2.png";
-import ele3 from "./elements/3.png";
-import ele4 from "./elements/4.png";
-import a_3 from "./elements/a_3.png";
-import a_4 from "./elements/a_4.png";
-import pink from "../bgs/pink.png";
 import Footer from "../footer/Footer";
 import Loader from "../loader/Loader";
 import SignUpModal from "../signup/SignUpModal";
 
 function CL() {
+  const ele1 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/1.png";
+  const ele2 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/2.png";
+  const ele3 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/3.png";
+  const ele4 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/4.png";
+  const a_3 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/a_3.png";
+  const a_4 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/a_4.png";
+  const pink="https://mokshainnovision.s3.eu-north-1.amazonaws.com/bgs/pink.png"
+  const head="https://mokshainnovision.s3.eu-north-1.amazonaws.com/strips/cl_strip.png"
+  const bg="https://mokshainnovision.s3.eu-north-1.amazonaws.com/bgs/cl_bg.png"
+  const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/mokshalogo.png"
+
   const [isSignUpModalOpen, setIsSignUpModalOpen] = React.useState(false);
 
   const [formData, setFormData] = useState({
