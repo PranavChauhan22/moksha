@@ -17,7 +17,7 @@ function Rt() {
   useEffect(() => {
     const loaderTimeout = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(loaderTimeout); // Clear the timeout when component unmounts
   }, []); // Empty dependency array ensures useEffect runs only once on mount
