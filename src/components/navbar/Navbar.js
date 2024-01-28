@@ -55,13 +55,10 @@ function Navbar() {
         </div>
       
       <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
-        <a
-          href="https://nsut.store/"
-          style={{ textDecoration: "none", color: "white" }}
-          target="_blank"
-        >
+      <Link to="/cs" style={{ textDecoration: "none", color: "white" }}>
+
           MERCHANDISE
-        </a>
+        </Link>
       </div>
       {!name ? (
         <div

@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import SignUpModal from "./components/signup/SignUpModal";
 import Loader from "./components/loader/Loader";
 import CS from "./components/cs/CS";
+import Event from "./components/events/Event";
 
 function Rt() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ function Rt() {
   useEffect(() => {
     const loaderTimeout = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(loaderTimeout); // Clear the timeout when component unmounts
   }, []); // Empty dependency array ensures useEffect runs only once on mount
@@ -33,6 +34,7 @@ function Rt() {
         <Faq />
         <Footer />
       </div>
+      {/* <Event/> */}
     </>
   );
 }

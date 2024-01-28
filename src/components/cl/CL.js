@@ -9,7 +9,7 @@ import Loader from "../loader/Loader";
 import SignUpModal from "../signup/SignUpModal";
 
 function CL() {
-  const ele1 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/1.png";
+  const ele1 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/wiacl.png";
   const ele2 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/2.png";
   const ele3 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/3.png";
   const ele4 = "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/4.png";
