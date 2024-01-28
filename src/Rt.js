@@ -25,7 +25,7 @@ function Rt() {
   return (
     <>
       {loading && <Loader />}
-      <div style={loading ? { visibility: "hidden" } : {}}>
+      <div style={loading ? { display:"none" } : {}}>
         <Navbar />
         <Home />
         <About />
