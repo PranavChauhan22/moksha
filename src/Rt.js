@@ -9,7 +9,6 @@ import Footer from "./components/footer/Footer";
 import SignUpModal from "./components/signup/SignUpModal";
 import Loader from "./components/loader/Loader";
 import CS from "./components/cs/CS";
-import Event from "./components/events/Event";
 
 function Rt() {
   const [loading, setLoading] = useState(true);
@@ -34,7 +33,7 @@ function Rt() {
         <Faq />
         <Footer />
       </div>
-      {/* <Event/> */}
+     
     </>
   );
 }
