@@ -158,7 +158,8 @@ margin-bottom: -15vw;
     width: 150vw;
     
     /* z-index: -1; */
-    
+    border-bottom-left-radius:80%;
+    /* border-bottom-right-radius:-40%; */
     background-image: url("https://mokshainnovision.s3.eu-north-1.amazonaws.com/bgs/cl_bg.png");
     background-repeat: repeat-x;
     background-size: cover;

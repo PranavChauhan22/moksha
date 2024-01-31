@@ -437,7 +437,7 @@ function CL() {
 
               <FaInstagram style={{ fontSize: "30px", marginRight: "50px" }} />
               </a>
-              <a href="https://wa.me/8700224705" target={"_blank"} style={{color:"black"}}>
+              <a href="https://wa.me/918700224705" target={"_blank"} style={{color:"black"}}>
 
               <FaWhatsapp style={{ fontSize: "30px" }} />
               </a>
@@ -451,7 +451,7 @@ function CL() {
 
               <FaInstagram style={{ fontSize: "30px", marginRight: "50px" }} />
               </a>
-              <a href="https://wa.me/9311575566" target={"_blank"} style={{color:"black"}}>
+              <a href="https://wa.me/919311575566" target={"_blank"} style={{color:"black"}}>
 
               <FaWhatsapp style={{ fontSize: "30px" }} />
               </a>
