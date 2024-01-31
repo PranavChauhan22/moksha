@@ -180,7 +180,7 @@ function CL() {
   } else {
     return (
       <div className="CL">
-        <img src={bg} className="cl_bg" />
+       
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
