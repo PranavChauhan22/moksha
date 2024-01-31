@@ -3,11 +3,12 @@
   @media screen and (min-width:1150px) {
     .middle-box {
       background-image: url('./Images/bgE.png');
-      background-size: cover;
+      background-size: contain;
      
        
      
         width: 100vw;
+        /* height: 200vh; */
         padding: 30px;
       }
     
@@ -20,6 +21,7 @@
        
      
         width: 100vw;
+        /* height: 200vh; */
         padding: 30px;
       }
     
@@ -62,3 +64,126 @@ margin: auto;
       padding: 10px;
   
   }
+
+/* ---- */
+
+
+
+.event{
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 #34cc98;
+  background-color: #ff6600;
+  text-align: left;
+  font-weight: bolder;
+}
+.events {
+ width: 55%;
+min-width: 300px;
+ margin: auto;
+}
+
+
+
+.event-answer {
+  white-space: pre;
+  overflow-x: auto;
+}
+.events .event {
+  margin: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.events .event .event-question {
+  position: relative;
+  font-size: 20px;
+  padding-right: 80px;
+  transition: all 0.4s ease;
+}
+
+.events .event .event-question::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease;
+}
+
+.events .event .event-answer {
+  opacity: 0;
+  max-height: 0;
+  /* overflow: hidden; */
+  transition: all 0.2s ease;
+}
+
+.events .event.open .event-question {
+  margin-bottom: 15px;
+}
+
+.events .event.open .event-question::after {
+  content: "-";
+}
+
+.events .event.open .event-answer {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+
+.event-h{
+
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 blueviolet;
+  background-color: yellow;
+  text-align: center;
+  font-weight: bolder;
+  margin: auto;
+  font-size: 18px;
+
+  padding: 20px;
+  width: 50%;
+  margin-bottom: 30px;
+
+}
+.event-b{
+
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+  background-color: #ff3b78;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  margin: auto;
+  font-size: 18px;
+
+  padding: 20px;
+  width: 50%;
+  margin-top: 30px;
+
+
+}
+.event-form{
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
+
+
+}
+.event-ip{
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.event-label{
+  margin-bottom: 10px;
+}
+.event-submit{
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}

@@ -31,7 +31,7 @@
     object-fit: cover;
 }
 
-@media screen and (min-width:840px) {
+@media screen and (min-width:1000px) {
     .home_logo_a{
         /* width: 320px; */
         height: 150px;
@@ -39,11 +39,12 @@
     }
     
 }
-@media screen and (max-width:840px) {
+@media screen and (max-width:1000px) {
     .home_logo_a{
         /* width: 320px; */
         height: 70px;
         margin: auto;
+        margin-top: -50px;
     }
     
 }

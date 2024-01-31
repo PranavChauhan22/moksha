@@ -6,6 +6,7 @@ import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 
 import "primereact/resources/themes/lara-light-cyan/theme.css";
+import PopupDoc from "./Nav";
 
 function Navbar() {
   const onlyWidth = useWindowWidth();
@@ -24,39 +25,41 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="navbar">
-            {onlyWidth >= 900 && (
+    onlyWidth>=1000?<div className="navbar">
 
-      <div className="navbar_ele n1">
-        <a href="#history" style={{ textDecoration: "none", color: "white" }}>
-          HISTORY
-        </a>
-      </div>
-      )}
-      {onlyWidth >= 900 && (
+        <div className="navbar_ele n1">
+          <a href="#history" style={{ textDecoration: "none", color: "white" }}>
+            HISTORY
+          </a>
+        </div>
+      
+   
         <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
           <a href="#footer" style={{ textDecoration: "none", color: "white" }}>
             CONTACT
           </a>
         </div>
-      )}
       
-      {onlyWidth >= 900 && (
+
+
         <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
           <Link to="/cs" style={{ textDecoration: "none", color: "white" }}>
             EVENTS
           </Link>
         </div>
-      )}
-        <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
-          <Link to="/cl" style={{ textDecoration: "none", color: "white" }}>
-            CL
-          </Link>
-        </div>
       
       <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
-      <a href="https://nsut.store/" target={"_blank"} style={{ textDecoration: "none", color: "white" }}>
+        <Link to="/cl" style={{ textDecoration: "none", color: "white" }}>
+          Contingent Leader
+        </Link>
+      </div>
 
+      <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
+        <a
+          href="https://nsut.store/"
+          target={"_blank"}
+          style={{ textDecoration: "none", color: "white" }}
+        >
           MERCHANDISE
         </a>
       </div>
@@ -71,18 +74,12 @@ function Navbar() {
       ) : (
         <div className="welcome_user">Welcome, {name}</div>
       )}
-      {/* {name && (
-        <div className="become_cl_btn">
-          <Link to={"/cl"} style={{ textDecoration: "none", color: "white" }}>
-            BECOME CL
-          </Link>
-        </div>
-      )} */}
+
       <SignUpModal
         isOpen={isSignUpModalOpen}
         onClose={() => setIsSignUpModalOpen(false)}
       />
-    </div>
+    </div>:<PopupDoc/>
   );
 }
 
