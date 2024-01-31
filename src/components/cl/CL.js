@@ -396,7 +396,7 @@ function CL() {
                   placeholder="Pan/Aadhar Card drive link"
                 />
               </div>
-              <div className="warning_drive_link">
+              <div className="warning_drive_link" style={{color:"white",marginBottom:"20px"}}>
                 ⚠️ Make sure the drive link you are sharing is open for all
               </div>
 
@@ -429,7 +429,7 @@ function CL() {
           <img src={ele4} className="cl_ele" />
         </div>
 
-        <div className="ad_wrap" style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+        <div className="ad_wrap" style={{display:"flex",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
           <div>
             <img src={a_3} className="a_wr" />
             <div style={{ marginTop: "-20px" }}>
