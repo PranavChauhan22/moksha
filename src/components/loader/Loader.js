@@ -7,7 +7,7 @@ const Loader = ({ src, duration }) => {
   
 
   return (
-    <div className=''>
+    <div className='loader_body'>
       {isPlaying && <img src={loader} alt="GIF" className='loader' />}
     </div>
   );
