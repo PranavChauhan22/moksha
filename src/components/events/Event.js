@@ -43,7 +43,7 @@ function Event() {
 
   const checkUserEvent = async (userEmail, eventToCheck) => {
     try {
-      const response = await fetch("http://localhost:3002/checkUserEvent", {
+      const response = await fetch("https://moksha-9bmv.onrender.com/checkUserEvent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -104,7 +104,7 @@ function Event() {
 
     try {
       // Send form data to the Node.js server using the fetch API
-      const response = await fetch("http://localhost:3002/registerEvents", {
+      const response = await fetch("https://moksha-9bmv.onrender.com/registerEvents", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
