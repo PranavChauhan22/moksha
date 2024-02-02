@@ -1,0 +1,43 @@
+.event_micro {
+    position: relative; /* Ensure proper stacking context */
+    width: 300px;
+    height: 300px;
+
+}
+.event_micro,.event_micro_1,.event_micro_2{
+    
+}
+
+.event_micro::before {
+    content: ''; /* Create a pseudo-element to act as the background */
+    background-image: url("./cards/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+
+    align-items: center;
+}
+
+.card_e_img {
+    width: 215px;
+    padding-top: 70px;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 5; /* Lower than the background to appear below it */
+    
+}
+.card_e_txt{
+    
+    padding-top: 5px;
+    font-weight: bolder;
+    
+    position: relative; /* Ensure proper stacking context */
+    z-index: 20; 
+}

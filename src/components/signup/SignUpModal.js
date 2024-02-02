@@ -118,9 +118,25 @@ const SignUpModal = ({ isOpen, onClose }) => {
       border:"transparent"
     },
   };
+  const CcustomStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor:"transparent",
+      border:"transparent",
+    },
+  };
 
   if(loading){
-    return <Loader/>
+    return <Modal isOpen={true}  style={CcustomStyles} >
+
+    
+    <Loader/>
+    </Modal>
   }else{
   return (
     <Modal

@@ -10,8 +10,9 @@ import SignUpModal from "./components/signup/SignUpModal";
 import Loader from "./components/loader/Loader";
 import CS from "./components/cs/CS";
 import Event from "./components/events/Event";
-import Eventmicro from "./components/events/Eventmicro";
 import Nav from "./components/navbar/Nav";
+import Events from "./components/events/Events";
+import Eventgall from "./components/events/Eventgall";
 
 function Rt() {
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,7 @@ function Rt() {
 
   return (
     <>
-      {loading && <Loader />}
+      {/* {loading && <Loader />}
       <div style={loading ? { display:"none" } : {}}>
         <Navbar />
         <Home />
@@ -35,9 +36,10 @@ function Rt() {
         <Timeline />
         <Faq />
         <Footer />
-      </div>
+      </div> */}
       {/* <Event/> */}
-      {/* <Eventmicro/> */}
+      <Events/>
+      {/* <Eventgall/> */}
      
     </>
   );

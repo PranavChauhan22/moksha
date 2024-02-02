@@ -1,59 +1,93 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../events/Event.css";
+import queryString from "query-string";
+import Modal from "react-modal";
+import SignUpModal from "../signup/SignUpModal";
+
+import { encode, decode } from "string-encode-decode";
+import { jwtDecode } from "jwt-decode";
+import Loader from "../loader/Loader";
+
 function Event() {
+  const logo =
+    "https://mokshainnovision.s3.eu-north-1.amazonaws.com/mokshalogo.png";
+  const [TOKEN, setTOKEN] = useState(null);
+  const [eventData, setEventData] = useState(null);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = React.useState(false);
+  const [loading, setLoading] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "transparent",
+      border: "transparent",
+    },
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+  const getMvid = async () => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      const email = jwtDecode(token).email;
+      setTOKEN(email);
+    }
+  };
+
+  const [result, setResult] = useState(null);
+
+  const checkUserEvent = async (userEmail, eventToCheck) => {
+    try {
+      const response = await fetch("http://localhost:3002/checkUserEvent", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userEmail, eventToCheck }),
+      });
+
+      const data = await response.json();
+
+      setResult(data.message);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setResult("An error occurred");
+    }
+  };
+
+  useEffect(() => {
+    // Assuming you are using react-router-dom for routing
+    const { search } = window.location;
+    const params = queryString.parse(search);
+
+    if (params.myArray) {
+      const myArray = JSON.parse(params.myArray);
+      const decodedArray = myArray.map((item) => decode(item));
+      console.log(decodedArray);
+      setEventData(decodedArray);
+      // Now you have your array in the component state or can use it as needed.
+    }
+
+    getMvid();
+  }, []);
+  useEffect(() => {
+    console.log("a",TOKEN,eventData);
+
+    if (TOKEN && eventData) {
+      checkUserEvent(TOKEN, eventData[4]);
+    }
+    console.log("e",result);
+  }, [eventData, TOKEN]);
+
   const [rr, setrr] = useState(false);
   const [formData, setFormData] = useState({});
 
   const [form, setform] = useState(true);
-  const data = [
-    "utkarsh.tripathy.ug21@nsut.ac.in",
-    "SHAKESJEER",
-    "shakesjeer.nsutd@gmail.com",
-    "MOKSHA",
-    "COMEDY HUNT",
-    "The Stand Up Competition",
-    "1) Team Size: Solo\n" +
-      "2) Judging Criteria: Content, Quality of humor, 3) Stage presence, Audience engagement, \n" +
-      "     Clarity of thought, Wackiness, USP (Unique \n" +
-      "      selling point)\n" +
-      "4)General Rules-\n" +
-      "  Mono -acting, puppetry, musicals are not \n" +
-      "  allowed though ventriloquism is allowed.\n" +
-      "  Use of props is allowed, brought in by the \n" +
-      "  participant himself. The organizers hold the \n" +
-      "  discretion of allowing it on stage.\n" +
-      "  Both English and Hindi are allowed. However \n" +
-      "  short sub passages in other regional \n" +
-      "  languages are allowed.\n" +
-      "  Decisions taken by the judge are absolute and \n" +
-      "  binding.\n" +
-      "  Use of obscenity/profanity (at the discretion \n" +
-      "  of the judges) is not allowed and there should \n" +
-      "  be no direct implications.\n" +
-      "  Any Form of music is not allowed during the \n" +
-      "  performance.\n" +
-      "  Since the participants are called upon in a \n" +
-      "  random order, everyone is required to be \n" +
-      "  present at least 5 minutes prior to the start.\n" +
-      "  Organizers will not be responsible if you are \n" +
-      "  unable to show up on time and miss your slot.\n" +
-      "\n" +
-      "\n" +
-      "Preliminary Round-\n" +
-      "  Time limit : 5 minutes\n" +
-      "  Participants have to submit the drive link of \n" +
-      "  the video before the given deadline.\n" +
-      "\n" +
-      "\n" +
-      "Final Round-\n" +
-      "  Time limit : 5-7 min",
-    "https://drive.google.com/thumbnail?id=1Z5aQFkG0MHuqYnMFhNDdz7xg2zEAQQOl",
-    "Vidhi", 
-    "8882969954",
-    "Utkarsh",
-    "9810366025",
-    "Name of the College, Participant Name, Contact No., Email-ID*, Prelims video submission (drive link)",
-  ];
 
   const handleInputChange = (field, value) => {
     setFormData((prevData) => ({
@@ -63,27 +97,38 @@ function Event() {
   };
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
+    setLoading(true);
+    // formData.append("id",TOKEN);
 
     try {
       // Send form data to the Node.js server using the fetch API
-      const response = await fetch("http://your-nodejs-server-endpoint", {
+      const response = await fetch("http://localhost:3002/registerEvents", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          data: formData,
+          event: eventData[4],
+          id: TOKEN,
+        }),
       });
 
       // Handle the response from the server
       if (response.ok) {
         console.log("Form submitted successfully!");
+        window.location.reload();
         // Optionally reset the form or perform other actions
       } else {
         console.error("Form submission failed.");
+        window.location.reload();
+
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      window.location.reload();
     }
   };
   const toggleFAQ = () => {
@@ -92,74 +137,162 @@ function Event() {
   const toggleForm = () => {
     setform((e) => !e);
   };
-  const formFields = data[12].split(", ").map((field, index) => (
-    <div key={index} className="event-form">
-      <label htmlFor={field} className="event-label">
-        {field}
-      </label>
-      <input
-        type="text"
-        id={field}
-        name={field}
-        className="event-ip"
-        required={!field.endsWith("*")}
-        onChange={(e) => handleInputChange(field, e.target.value)}
-      />
-    </div>
-  ));
 
-  return (
-    <div className="middle-box">
-      <div className="events_slip">EVENTS</div>
-      
-      <div className="event-box">
-        <img
-          src={
-            "https://mokshainnovision.s3.eu-north-1.amazonaws.com/events/17DAOX9tm6Ero7d2InuZ1UjMuHVqlM5OF.png"
-          }
-          className="event_img"
+  const CcustomStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      backgroundColor:"transparent",
+      border:"transparent",
+    },
+  };
+
+  if ((eventData === null && result === null)||( loading)) {
+    return <div>Loading</div>;
+  }  else {
+    const formFields = eventData[12].split(",").map((field, index) => (
+      <div key={index} className="event-form">
+        <label htmlFor={field} className="event-label">
+          {field}
+        </label>
+        <input
+          type="text"
+          id={field}
+          name={field}
+          className="event-ip"
+          required={!field.endsWith("*")}
+          onChange={(e) => handleInputChange(field, e.target.value)}
         />
       </div>
-      <div className="event-h">
-        {data[4]} presented by {data[1]} in Moksha - Innovision 2024
-      </div>
-      <div className="events">
-        <div
-          className={"event " + (rr ? "open" : "")}
-          key={"1"}
-
+    ));
+    return (
+      <div className="middle-box">
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Signup Modal"
+          style={customStyles}
         >
-          <div className="event-question" onClick={() => toggleFAQ()}> Rules & Regulations</div>
-          <div className="event-answer"><pre>{data[6]}</pre></div>
+          <div
+            style={{
+              backgroundColor: "black",
+              height: "220px",
+              padding: "10px",
+            }}
+          >
+            <img
+              src={logo}
+              alt="Moksha-Innovision 2024"
+              style={{ height: "100px" }}
+            />
+            <p
+              style={{
+                color: "white",
+                textAlign: "center",
+                fontWeight: "bolder",
+                width: "200px",
+                margin: "auto",
+              }}
+            ></p>
+            <div
+              onClick={closeModal}
+              style={{
+                border: "1px solid white",
+                width: "60px",
+                padding: "10px",
+                color: "white",
+                margin: "auto",
+                textAlign: "center",
+                fontWeight: "bolder",
+                marginBottom: "20px",
+                cursor: "pointer",
+                marginTop: "20px",
+              }}
+            >
+              Close
+            </div>
+            {/* Add more content as needed */}
+          </div>
+        </Modal>
+
+        <div className="events_slip">{eventData[5]}</div>
+
+        <div className="event-box">
+          <img src={eventData[7]} className="event_img" />
         </div>
-      </div>
-
-      <div className="event-b">
-        For queries, contact: {data[8]} at {data[9]} or {data[10]} at {data[11]}
-      </div>
-
-      <div className="form-container">
-      
-      </div>
-      <div className="events" style={{marginTop:"30px"}}>
-        <div
-          className={"event " + (form ? "open" : "")}
-          key={"1"}
-          
-        >
-          <div className="event-question" onClick={() => toggleForm()}>Register Now</div>
-          <div className="event-answer">
-          <form className="event-form-f" onSubmit={handleSubmit}>
-              {formFields}
-              <button type="submit" className="event-submit">Submit</button>
-            </form>
+        <div className="event-h">
+          {eventData[4]} presented by {eventData[1]} in Moksha - Innovision 2024
+        </div>
+        <div className="eventsl">
+          <div className={"eventl " + (rr ? "open" : "")} key={"1"}>
+            <div className="event-question" onClick={() => toggleFAQ()}>
+              {" "}
+              Rules & Regulations
+            </div>
+            <div className="event-answer">
+              <pre>{eventData[6]}</pre>
+            </div>
           </div>
         </div>
- 
+
+        <div className="event-b">
+          For queries, contact: {eventData[8]} at {eventData[9]} or{" "}
+          {eventData[10]} at {eventData[11]}
+        </div>
+
+        <div className="form-container"></div>
+        <div className="eventsl" style={{ marginTop: "30px" }}>
+          <div className={"eventl " + (form ? "open" : "")} key={"1"}>
+            <div className="event-question" onClick={() => toggleForm()}>
+              Register Now
+            </div>
+            <div className="event-answer">
+              {TOKEN ? (
+                <>
+                  {result === "no" ? (
+                    <form className="event-form-f" onSubmit={handleSubmit}>
+                      {formFields}
+                      <button type="submit" className="event-submit">
+                        Submit
+                      </button>
+                    </form>
+                  ) : (
+                    <div>You have already registered for the event!</div>
+                  )}
+                </>
+              ) : (
+                <>
+                  <div
+                    className="navbar_ele n3"
+                    onClick={() => setIsSignUpModalOpen(true)}
+                    style={{
+                      cursor: "pointer",
+                      backgroundColor: "black",
+                      padding: "20px",
+                      width: "120px",
+                      textAlign: "center",
+                      margin: "auto",
+                    }}
+                  >
+                    SIGN-UP
+                  </div>
+
+                  <SignUpModal
+                    isOpen={isSignUpModalOpen}
+                    onClose={() => setIsSignUpModalOpen(false)}
+                  />
+                </>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
-      
-    </div>
-  );
+    );
+  }
 }
 
 export default Event;

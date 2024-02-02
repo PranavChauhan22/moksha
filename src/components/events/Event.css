@@ -27,29 +27,111 @@
     
   }
   
-  .event-box {
-    background-image: url('./Images/11.png');
-    background-size: cover;
-    background-repeat: none;
-    width: 820px;
-    height: 710px;
-    padding: 40px;   
-    
-margin: auto;
- 
-    display: flex;
-   
-    justify-content: center;
-    align-items: center;
-  }
   
-  .event_img {
-    max-width: 83%;
 
-
-    height: auto;
+  @media screen and (min-width:960px) {
+    .event-box {
+      background-image: url('./Images/11.png');
+      background-size: cover;
+      background-repeat: none;
+      width: 820px;
+      height: 710px;
+      padding: 40px;   
+      
+  margin: auto;
+   
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+    }
     
-    /* padding: 10px; */
+    .event_img {
+      max-width: 83%;
+  
+  
+      height: auto;
+      
+      /* padding: 10px; */
+    }
+  }
+  @media screen and (max-width:960px) and (min-width:740px) {
+    .event-box {
+      background-image: url('./Images/11.png');
+      background-size: cover;
+      background-repeat: none;
+      width: 620px;
+      height: 535px;
+      padding: 40px;   
+      
+  margin: auto;
+   
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .event_img {
+      width: 86%;
+  
+  
+      height: auto;
+      
+    }
+  }
+  @media screen and (max-width:740px) and (min-width:400px) {
+    .event-box {
+      background-image: url('./Images/11.png');
+      background-size: cover;
+      background-repeat: none;
+      width: 360px;
+      height: 310px;
+      padding: 40px;   
+      
+  margin: auto;
+   
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .event_img {
+      width: 96%;
+  
+  
+      height: auto;
+      
+    }
+  
+  }
+  @media screen and (max-width:400px) {
+    .event-box {
+      background-image: url('./Images/11.png');
+      background-size: cover;
+      background-repeat: none;
+      width: 300px;
+      height: 260px;
+      padding: 40px;   
+      
+  margin: auto;
+   
+      display: flex;
+     
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .event_img {
+      width: 102%;
+  
+  
+      height: auto;
+      
+    }
+  
+  
   }
   
 
@@ -58,10 +140,10 @@ margin: auto;
       background-color: #03d3cd;
       text-align: center;
       font-weight: bolder;
-      width: 150px;
+      width: 300px;
       margin: auto;
-      font-size: 30px;
-      padding: 10px;
+      font-size: 20px;
+      padding: 20px;
   
   }
 
@@ -69,13 +151,13 @@ margin: auto;
 
 
 
-.event{
+.eventl{
   box-shadow: 0 0 0 2px black, 8px 8px 0 0 #34cc98;
   background-color: #ff6600;
   text-align: left;
   font-weight: bolder;
 }
-.events {
+.eventsl {
  width: 55%;
 min-width: 300px;
  margin: auto;
@@ -87,20 +169,20 @@ min-width: 300px;
   white-space: pre;
   overflow-x: auto;
 }
-.events .event {
+.eventsl .eventl {
   margin: 15px;
   padding: 15px;
   border-radius: 10px;
 }
 
-.events .event .event-question {
+.eventsl .eventl .event-question {
   position: relative;
   font-size: 20px;
   padding-right: 80px;
   transition: all 0.4s ease;
 }
 
-.events .event .event-question::after {
+.eventsl .eventl .event-question::after {
   content: "+";
   position: absolute;
   top: 50%;
@@ -111,22 +193,22 @@ min-width: 300px;
   transition: all 0.2s ease;
 }
 
-.events .event .event-answer {
+.eventsl .eventl .event-answer {
   opacity: 0;
   max-height: 0;
   /* overflow: hidden; */
   transition: all 0.2s ease;
 }
 
-.events .event.open .event-question {
+.eventsl .eventl.open .event-question {
   margin-bottom: 15px;
 }
 
-.events .event.open .event-question::after {
+.eventsl .eventl.open .event-question::after {
   content: "-";
 }
 
-.events .event.open .event-answer {
+.eventsl .eventl.open .event-answer {
   max-height: 1000px;
   opacity: 1;
 }
@@ -186,4 +268,8 @@ justify-content: space-between;
   padding: 10px;
   font-weight: bolder;
   cursor: pointer;
+}
+.img_e_r{
+  background-color: #cb6ce5;
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 #5de1e6;
 }

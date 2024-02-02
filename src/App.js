@@ -14,6 +14,7 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Rt from "./Rt";
 import Loader from "./components/loader/Loader";
 import CS from "./components/cs/CS";
+import Event from "./components/events/Event";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Route exact path={"/"} element={<Rt/>}/>
       <Route exact path={"/cl"} element={<CL/>}/>
       <Route exact path={"/cs"} element={<CS/>}/>
+      <Route exact path={"/mv"} element={<Event/>}/>
+      
       
       </Routes>
      </Router>

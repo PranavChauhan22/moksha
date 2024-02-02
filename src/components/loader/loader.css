@@ -1,5 +1,6 @@
 .loader{
-    height: 50vh;
+    height: 250px;
+    border-radius: 10px;
     
 }
 .loader_body{
