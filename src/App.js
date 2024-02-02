@@ -15,6 +15,7 @@ import Rt from "./Rt";
 import Loader from "./components/loader/Loader";
 import CS from "./components/cs/CS";
 import Event from "./components/events/Event";
+import Events from "./components/events/Events";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route exact path={"/cl"} element={<CL/>}/>
       <Route exact path={"/cs"} element={<CS/>}/>
       <Route exact path={"/mv"} element={<Event/>}/>
+      <Route exact path={"/events"} element={<Events/>}/>
       
       
       </Routes>

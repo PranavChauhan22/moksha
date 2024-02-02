@@ -27,7 +27,7 @@ function Rt() {
 
   return (
     <>
-      {/* {loading && <Loader />}
+      {loading && <Loader />}
       <div style={loading ? { display:"none" } : {}}>
         <Navbar />
         <Home />
@@ -36,10 +36,8 @@ function Rt() {
         <Timeline />
         <Faq />
         <Footer />
-      </div> */}
-      {/* <Event/> */}
-      <Events/>
-      {/* <Eventgall/> */}
+      </div>
+      
      
     </>
   );
