@@ -8,6 +8,7 @@ import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import "./signup.css";
 import axios from "axios";
 import Loader from "../loader/Loader";
+import LoaderM from "../loader/LoaderM";
 
 const SignUpModal = ({ isOpen, onClose }) => {
   const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/mokshalogo.png";
@@ -135,7 +136,7 @@ const SignUpModal = ({ isOpen, onClose }) => {
     return <Modal isOpen={true}  style={CcustomStyles} >
 
     
-    <Loader/>
+    <LoaderM/>
     </Modal>
   }else{
   return (

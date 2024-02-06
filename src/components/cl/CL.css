@@ -81,6 +81,9 @@ margin-bottom: -15vw;
     margin-top: 20px;
 
 }
+.cl_txtarea_ip{
+    color: white;
+}
 
 @media screen and (min-width:720px) {
     .cl_txtarea_ip{

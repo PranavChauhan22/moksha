@@ -23,14 +23,19 @@ function Events() {
       try {
         const response = await fetch("https://moksha-9bmv.onrender.com/getEvents");
         const data = await response.json();
-        setEventsData(data.message);
+        
+        // Remove the first entry from the array
+        const newData = data.message.slice(1);
+        
+        setEventsData(newData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
+  
     fetchData();
   }, []); // Empty dependency array means the effect runs once after the initial render
+  
 
   const filteredEvents = eventsData.filter(
     (event) =>
