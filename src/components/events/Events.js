@@ -8,6 +8,7 @@ import "./Events.css";
 import cds from "./assets/cds.gif";
 import queryString from "query-string";
 import {encode, decode} from 'string-encode-decode'
+import Loader from "../loader/Loader";
 
 
 function Events() {
@@ -16,6 +17,7 @@ function Events() {
   const [eventsData, setEventsData] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState("");
   const [searchValue, setSearchValue] = useState("");
+  const [day, setDay] = useState("");
 
   useEffect(() => {
     // Fetch events data from localhost:3002/getEvents
@@ -23,7 +25,7 @@ function Events() {
       try {
         const response = await fetch("https://moksha-9bmv.onrender.com/getEvents");
         const data = await response.json();
-        
+        console.log(data);
         // Remove the first entry from the array
         const newData = data.message.slice(1);
         
@@ -41,11 +43,12 @@ function Events() {
     (event) =>
       event[13] &&
       event[13].toLowerCase().includes(selectedFilter.toLowerCase()) &&
-      event[4].toLowerCase().includes(searchValue.toLowerCase())
+      event[4].toLowerCase().includes(searchValue.toLowerCase()) && 
+      (day === "" || day === event[14] )
   );
 
 if(!eventsData){
-  return <div>Loading</div>
+  return <Loader/>
 }else{
   return (
     <div className="events">
@@ -71,7 +74,13 @@ if(!eventsData){
             )
           )}
         </select>
+        <div className="days-filter">
 
+          <div className={day!==""?"btn-day-filter":"btn-day-filter addon-u-d"} onClick={()=>setDay("")}>All Days</div>
+          <div className={day!=="1"?"btn-day-filter":"btn-day-filter addon-u-d"} onClick={()=>setDay("1")}>Day 1</div>
+          <div className={day!=="2"?"btn-day-filter":"btn-day-filter addon-u-d"} onClick={()=>setDay("2")}>Day 2</div>
+          <div className={day!=="3"?"btn-day-filter":"btn-day-filter addon-u-d"} onClick={()=>setDay("3")}>Day 3</div>
+          </div>
         <input
           type="text"
           id="searchInput"
@@ -85,8 +94,7 @@ if(!eventsData){
         {filteredEvents.map((event, index) => {
           const randomComponent = getRandomComponent(index);
           const encodedArray = event.map(e=>encode(e,'gbk'));
-          console.log(encodedArray);
-          const params = { myArray: JSON.stringify(encodedArray) };
+          const params = { UIMV: JSON.stringify(encodedArray) };
           const queryStringParams = queryString.stringify(params);
 
           return (

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Rowdies:wght@300&display=swap');
 @media screen and (min-width: 1150px) {
   .middle-box {
     background-image: url('./Images/bgE.png');
     background-size: contain;
 
-    height: 100%;
+    /* height: 100%; */
+    
     width: 100vw;
     /* height: 200vh; */
     padding: 30px;
@@ -14,7 +16,7 @@
     background-image: url('./Images/bgE.png');
     background-size: contain;
 
-    height: 100%;
+    /* height: 100%; */
     width: 100vw;
     /* height: 200vh; */
     padding: 30px;
@@ -116,6 +118,8 @@
   }
 }
 
+
+
 .events_slip {
   box-shadow: 0 0 0 2px black, 8px 8px 0 0 #ff3b78;
   background-color: #03d3cd;
@@ -125,6 +129,7 @@
   margin: auto;
   font-size: 20px;
   padding: 20px;
+  font-family: 'Rowdies', sans-serif;
 }
 
 /* ---- */
@@ -141,10 +146,7 @@
   margin: auto;
 }
 
-.event-answer {
-  white-space: pre;
-  overflow-x: auto;
-}
+
 .eventsl .eventl {
   margin: 15px;
   padding: 15px;
@@ -175,6 +177,9 @@
   /* overflow: hidden; */
   transition: all 0.2s ease;
 }
+.event-answer {
+  overflow-x: auto;
+}
 
 .eventsl .eventl.open .event-question {
   margin-bottom: 15px;
@@ -185,7 +190,7 @@
 }
 
 .eventsl .eventl.open .event-answer {
-  max-height: 1000px;
+  max-height: 100%;
   opacity: 1;
 }
 
@@ -218,6 +223,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 .event-ip {
   margin-bottom: 10px;
@@ -241,3 +247,4 @@
   background-color: #cb6ce5;
   box-shadow: 0 0 0 2px black, 8px 8px 0 0 #5de1e6;
 }
+

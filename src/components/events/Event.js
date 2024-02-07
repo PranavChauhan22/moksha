@@ -16,6 +16,35 @@ function Event() {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = React.useState(false);
   const [loading, setLoading] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  function formatText(content) {
+    const sections = content.split(/(?=\$+\d+\)|(?<!\$)\d+\)|(?<!\$)\d+\.\s*\$\$)/);
+
+    return (
+      <div>
+        {sections.map((section, index) => (
+          <div key={index}>
+            {/* Formatting each section */}
+            {section.split(/\$\$|\$/).map((item, idx) => {
+              // Check if the item is not an empty string
+              if (item.trim() !== '') {
+                return <p key={idx}>{item.trim()}</p>;
+              } else {
+                return null;
+              }
+            })}
+          </div>
+        ))}
+      </div>
+    );
+    // return <div>{content}</div>
+  };
+  
+
+  
+  
+  
+
   const customStyles = {
     content: {
       top: "50%",
@@ -65,8 +94,8 @@ function Event() {
     const { search } = window.location;
     const params = queryString.parse(search);
 
-    if (params.myArray) {
-      const myArray = JSON.parse(params.myArray);
+    if (params.UIMV) {
+      const myArray = JSON.parse(params.UIMV);
       const decodedArray = myArray.map((item) => decode(item));
       console.log(decodedArray);
       setEventData(decodedArray);
@@ -76,12 +105,10 @@ function Event() {
     getMvid();
   }, []);
   useEffect(() => {
-    console.log("a",TOKEN,eventData);
 
     if (TOKEN && eventData) {
       checkUserEvent(TOKEN, eventData[4]);
     }
-    console.log("e",result);
   }, [eventData, TOKEN]);
 
   const [rr, setrr] = useState(false);
@@ -152,7 +179,7 @@ function Event() {
   };
 
   if ((eventData === null && result === null)||( loading)) {
-    return <div>Loading</div>;
+    return <Loader/>
   }  else {
     const formFields = eventData[12].split(",").map((field, index) => (
       <div key={index} className="event-form">
@@ -234,7 +261,10 @@ function Event() {
               Rules & Regulations
             </div>
             <div className="event-answer">
-              <pre>{eventData[6]}</pre>
+              
+              {formatText(eventData[6])}
+
+              
             </div>
           </div>
         </div>
