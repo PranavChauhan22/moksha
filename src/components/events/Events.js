@@ -28,8 +28,8 @@ function Events() {
         console.log(data);
         // Remove the first entry from the array
         const newData = data.message.slice(1);
-        
-        setEventsData(newData);
+        const reqData=newData.filter(array => array[15] !== "NO")
+        setEventsData(reqData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -41,10 +41,12 @@ function Events() {
 
   const filteredEvents = eventsData.filter(
     (event) =>
+   
       event[13] &&
       event[13].toLowerCase().includes(selectedFilter.toLowerCase()) &&
       event[4].toLowerCase().includes(searchValue.toLowerCase()) && 
       (day === "" || day === event[14] )
+     
   );
 
 if(!eventsData){
