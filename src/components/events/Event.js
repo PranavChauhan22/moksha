@@ -18,8 +18,8 @@ function Event() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function formatText(content) {
-    const sections = content.split(/(?=\$+\d+\)|(?<!\$)\d+\)|(?<!\$)\d+\.\s*\$\$)/);
-
+    const sections = content.split(/(?=\$+\d{1,2}\)|(?<!\$)\d{1,2}\)|(?<!\$)\d{1,2}\.\s*\$\$)/);
+  
     return (
       <div>
         {sections.map((section, index) => (
@@ -37,7 +37,6 @@ function Event() {
         ))}
       </div>
     );
-    // return <div>{content}</div>
   };
   
 
