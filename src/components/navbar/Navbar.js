@@ -43,7 +43,7 @@ function Navbar() {
 
 
         <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
-          <Link to="/cs" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/events" style={{ textDecoration: "none", color: "white" }}>
             EVENTS
           </Link>
         </div>
