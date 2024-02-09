@@ -57,7 +57,7 @@ if(!eventsData){
         <div className="e_h_head">EVENTS</div>
         <img src={cds} className="e_m_wrap" />
       </div>
-      <Eventgall imgs={data} />
+      <Eventgall imgs={eventsData} />
       <div className="filter-section">
         <select
           id="filterDropdown"
