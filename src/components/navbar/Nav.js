@@ -5,6 +5,8 @@ import { Menu } from 'primereact/menu';
 import { Toast } from 'primereact/toast';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { jwtDecode } from "jwt-decode";
+import SignUpModal from "../signup/SignUpModal";
+
 
 
 export default function PopupDoc() {
@@ -81,6 +83,10 @@ export default function PopupDoc() {
       ) : (
         <div className="welcome_user" style={{ cursor: "pointer",position:"absolute",left:"25px",top:"25px",backgroundColor:"",color:"white ",fontWeight:"bolder" }}>Welcome, {name}</div>
       )}
+       <SignUpModal
+        isOpen={isSignUpModalOpen}
+        onClose={() => setIsSignUpModalOpen(false)}
+      />
         </>
     )
 }
