@@ -44,7 +44,7 @@ export default function PopupDoc() {
                 {
                     label: 'Events',
                     icon: 'pi pi-upload',
-                    url:"/cs"
+                    url:"/events"
                 },
                 {
                     label: 'Contingent Leader',
