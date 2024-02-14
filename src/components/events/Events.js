@@ -68,9 +68,9 @@ if(!eventsData){
         >
           <option value="">All</option>
           {/* Create options based on unique values in data[13] */}
-          {Array.from(new Set(data.map((event) => event[13]))).map(
+          {Array.from(new Set(eventsData.map((event) => event[13]))).map(
             (value, index) => (
-              <option key={index} value={value}>
+            value&&value.length>0&&<option key={index} value={value}>
                 {value}
               </option>
             )

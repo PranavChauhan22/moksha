@@ -8,7 +8,11 @@ body{
 
 
 }
-
+.p-button.p-button-icon-only
+{
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
 html{
   scroll-behavior: smooth;
 }
