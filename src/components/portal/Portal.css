@@ -1,0 +1,156 @@
+.data-viewer-container {
+  height: 70vh;
+  overflow-y: auto;
+  background-color: rgb(49, 142, 170);
+  color: black;
+  border-radius: 5px;
+  margin-top: 30px;
+  font-weight: bolder;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.portal {
+  background-image: url('./pbg.png');
+  background-size: contain;
+
+  height: 100vh;
+  width: 100%;
+
+  /* height: 200vh; */
+  padding: 20px;
+}
+.p_name {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 20px;
+  width: 200px;
+  margin: auto;
+  background-color: #ca6ce5;
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+}
+.pgif {
+  height: 80px;
+  object-fit: cover;
+  
+  
+  
+}
+.pgif_dash {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.pform{
+  background-color: orange;
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 cyan;
+  width: 300px;
+  height: 220px;
+  margin: auto;
+  margin-top: 50px;
+
+}
+.pemail{
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 250px;
+  margin-top: 30px;
+}
+.ppassword{
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 250px;
+  margin-top: 30px;
+  color: black;
+
+
+
+}
+.ppassword::placeholder{
+  color: black;
+  font-weight: bolder;
+}
+.pemail::placeholder{
+  color: black;
+  font-weight: bolder;
+}
+.pbtn{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  
+  width: 120px;
+  margin-top: 20px;
+  border: transparent;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+.fgif{
+  width: 50vw;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.8;
+  /* border: 1px solid white; */
+  margin: 50px;
+  border-radius: 10px;
+
+}
+.fgif_2{
+  width: 50vw;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  opacity: 0.8;
+  /* border: 1px solid white; */
+  margin: 50px;
+  border-radius: 10px;
+
+}
+
+
+.p-toast{
+  font-weight: bolder !important;
+}
+.csvbtn{
+  font-size: 15px;
+  font-weight: bolder;
+  padding: 10px;
+  border: transparent;
+  width: 150px;
+  margin: auto;
+  background-color: #ca6ce5;
+  box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+  margin-top: 20px;
+  cursor: pointer;
+}
+

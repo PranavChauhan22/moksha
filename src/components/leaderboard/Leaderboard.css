@@ -1,0 +1,76 @@
+.table_leader{
+    background-image: linear-gradient(#1f1f22ea, #1f1f22);
+    border: 1px solid #4c4e54;
+    border-radius: 8px;
+ 
+ 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+}
+
+
+.leaderboard{
+    background-color: black;
+    padding: 30px;
+}
+
+.p-datatable-header{
+    background-image: linear-gradient(#1f1f22ea, #1f1f22)!important;
+}
+.p-paginator-bottom{
+    background-image: linear-gradient(#1f1f22ea, #1f1f22) !important;
+}
+
+.chart{
+    margin-top: 50px;
+}
+.graph-x{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.lead_head{
+    background-color: #ca6ce5;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 200px;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.lgif{
+    height: 50px;
+}
+.lead_gif{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tabs_l_h{
+    background-color: #ca6ce5;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 200px;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+.tabs_l_b{
+    background-color: yellow;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 #ca6ce5;
+    width: 200px;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+.tabs_l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

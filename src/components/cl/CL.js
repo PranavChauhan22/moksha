@@ -11,18 +11,16 @@ import i3 from "./3.png";
 import i4 from "./4.png";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
-import r2 from "./r2.png"
-import r4 from "./r4.png"
+import r2 from "./r2.png";
+import r4 from "./r4.png";
 
 function CL() {
   const ele1 =
     "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/1.png";
-  const ele2 =
-    r2;
+  const ele2 = r2;
   const ele3 =
     "https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsCL/3.png";
-  const ele4 =
-    r4;
+  const ele4 = r4;
   const a_3 = i3;
   const a_4 = i4;
   const pink =
@@ -180,7 +178,6 @@ function CL() {
   } else {
     return (
       <div className="CL">
-       
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -396,7 +393,10 @@ function CL() {
                   placeholder="Pan/Aadhar Card drive link"
                 />
               </div>
-              <div className="warning_drive_link" style={{color:"white",marginBottom:"20px"}}>
+              <div
+                className="warning_drive_link"
+                style={{ color: "white", marginBottom: "20px" }}
+              >
                 ⚠️ Make sure the drive link you are sharing is open for all
               </div>
 
@@ -429,17 +429,33 @@ function CL() {
           <img src={ele4} className="cl_ele" />
         </div>
 
-        <div className="ad_wrap" style={{display:"flex",justifyContent:"center",alignItems:"center",flexWrap:"wrap"}}>
+        <div
+          className="ad_wrap"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
           <div>
             <img src={a_3} className="a_wr" />
             <div style={{ marginTop: "-20px" }}>
-            <a href="https://www.instagram.com/ix.xi.ii_?igsh=MXRibHhxZXYweGRldA==" target={"_blank"} style={{color:"black"}}>
-
-              <FaInstagram style={{ fontSize: "30px", marginRight: "50px" }} />
+              <a
+                href="https://www.instagram.com/ix.xi.ii_?igsh=MXRibHhxZXYweGRldA=="
+                target={"_blank"}
+                style={{ color: "black" }}
+              >
+                <FaInstagram
+                  style={{ fontSize: "30px", marginRight: "50px" }}
+                />
               </a>
-              <a href="https://wa.me/918700224705" target={"_blank"} style={{color:"black"}}>
-
-              <FaWhatsapp style={{ fontSize: "30px" }} />
+              <a
+                href="https://wa.me/918700224705"
+                target={"_blank"}
+                style={{ color: "black" }}
+              >
+                <FaWhatsapp style={{ fontSize: "30px" }} />
               </a>
             </div>
           </div>
@@ -447,13 +463,21 @@ function CL() {
           <div>
             <img src={a_4} className="a_wr" />
             <div style={{ marginTop: "-20px" }}>
-              <a href="https://www.instagram.com/singhaditya__11?igsh=dHc3MzdsbTY3Y3Y0" target={"_blank"} style={{color:"black"}}>
-
-              <FaInstagram style={{ fontSize: "30px", marginRight: "50px" }} />
+              <a
+                href="https://www.instagram.com/singhaditya__11?igsh=dHc3MzdsbTY3Y3Y0"
+                target={"_blank"}
+                style={{ color: "black" }}
+              >
+                <FaInstagram
+                  style={{ fontSize: "30px", marginRight: "50px" }}
+                />
               </a>
-              <a href="https://wa.me/919311575566" target={"_blank"} style={{color:"black"}}>
-
-              <FaWhatsapp style={{ fontSize: "30px" }} />
+              <a
+                href="https://wa.me/919311575566"
+                target={"_blank"}
+                style={{ color: "black" }}
+              >
+                <FaWhatsapp style={{ fontSize: "30px" }} />
               </a>
             </div>
           </div>

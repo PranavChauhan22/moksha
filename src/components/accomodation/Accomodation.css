@@ -1,0 +1,164 @@
+.acc{
+    background-image: url("./bgacc.png");
+    background-size: contain;
+    width: 100vw;
+    /* height: 100vh; */
+    /* padding: 30px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+
+
+.acc_p{
+    background-color: #5de1e6;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 200px;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 20px;
+}
+.acc_p_a{
+    background-color: black;
+    border: 1px solid white;
+    margin-top: 100px;
+    color: white;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 200px;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 20px;
+}
+.acc_p_b{
+    background-color: pink;
+    border: 1px solid white;
+    margin-top: 100px;
+    /* color: white; */
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 cyan;
+    width: 200px;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 20px;
+}
+.acc_l{
+    background-color: purple;
+    color: white;
+    margin-top: 30px;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 160px;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 20px;
+}
+.acc_s{
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 40vw;
+  min-width: 300px;
+    font-weight: bolder;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: left;
+}
+.acc_head{
+    /* width: 60vw; */
+    margin-top: 20vh;
+    margin-left: 50px;
+}
+.i3{
+    height: 300px;
+    /* margin: 20px; */
+    margin-right: 20px;
+    margin-top: 30px;
+    margin-left: -30px;
+
+}
+.heads_acc{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -60px;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
+.back_btn{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back_io
+{
+    font-size: 40px;
+}
+.back_txt{
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+@media screen and (max-width:820px) {
+    .tower{
+        width: 300px;
+    }
+    .acc{
+        justify-content: center;
+        
+    }
+    .acc_head{
+        margin-left: 0px;
+    }
+    .heads_acc{
+        margin-left: 0px;
+    }
+    
+}
+.cloud {
+    position: absolute;
+    top: 100px;
+    background-color: wheat;
+    left: -100px; /* adjust based on the width of your cloud image */
+    height: 200px;
+    width: 500px;
+    background: url('./cloud.png') no-repeat;
+    background-size: contain;
+    animation: moveCloud 10s linear infinite;
+    z-index: 1000;
+  }
+  
+  @keyframes moveCloud {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100vw)); /* adjust based on the width of your cloud */
+    }
+  }
+.cloud1 {
+    position: absolute;
+    top: 200px;
+    background-color: wheat;
+    left: -100px; /* adjust based on the width of your cloud image */
+    height: 500px;
+    width: 500px;
+    background: url('./cloud.png') no-repeat;
+    background-size: contain;
+    animation: moveCloud 10s linear infinite;
+    z-index: 1000;
+  }
+  
+  @keyframes moveCloud {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100vw)); /* adjust based on the width of your cloud */
+    }
+  }
