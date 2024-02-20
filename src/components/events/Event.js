@@ -130,6 +130,7 @@ function Event() {
 
     try {
       // Send form data to the Node.js server using the fetch API
+      // const response = await fetch("http://localhost:3002/registerEvents", {
       const response = await fetch("https://moksha-9bmv.onrender.com/registerEvents", {
         method: "POST",
         headers: {
@@ -180,21 +181,27 @@ function Event() {
   if ((eventData === null && result === null)||( loading)) {
     return <Loader/>
   }  else {
-    const formFields = eventData[12].split(",").map((field, index) => (
-      <div key={index} className="event-form">
-        <label htmlFor={field} className="event-label">
-          {field}
-        </label>
-        <input
-          type="text"
-          id={field}
-          name={field}
-          className="event-ip"
-          required={!field.endsWith("*")}
-          onChange={(e) => handleInputChange(field, e.target.value)}
-        />
-      </div>
-    ));
+    const formFields = eventData[12].split(",").map((field, index) => {
+      // Check if the field ends with an asterisk
+      const isCompulsory = field.trim().endsWith("*");
+    
+      return (
+        <div key={index} className="event-form">
+          <label htmlFor={field} className="event-label">
+            {field}
+          </label>
+          <input
+            type="text"
+            id={field}
+            name={field}
+            className="event-ip"
+            required={isCompulsory} // Set required based on whether field ends with '*'
+            onChange={(e) => handleInputChange(field, e.target.value)}
+          />
+        </div>
+      );
+    });
+    
     return (
       <div className="middle-box">
         <Modal
