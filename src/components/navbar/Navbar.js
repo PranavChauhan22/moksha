@@ -29,7 +29,7 @@ function Navbar() {
 
         <div className="navbar_ele n1">
           <a href="/accommodation" style={{ textDecoration: "none", color: "white" }}>
-            Accommodation
+            ACCOMMODATION
           </a>
         </div>
       
@@ -50,7 +50,7 @@ function Navbar() {
       
       <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
         <Link to="/cl" style={{ textDecoration: "none", color: "white" }}>
-          Contingent Leader
+          CONTINGENT LEADER
         </Link>
       </div>
 
