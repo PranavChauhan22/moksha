@@ -28,14 +28,14 @@ function Accomodation() {
         {/* <div className="cloud"></div>
         <div className="cloud1"></div> */}
         <div className="acc_head">
-          <div className="acc_p">ACCOMMODATION</div>
+          <div className="acc_p">ACCOMMODATION at Netaji Subhas University of Technology, Delhi.</div>
           <div className="acc_s">
-            At Netaji Subhas University of Technology, Delhi. Welcome to
-            Moksha-Innovision, N.S.U.T.'s legendary cultural and technical
+             Welcome to
+            Moksha-Innovision, NSUT's legendary cultural and technical
             festival, now celebrating its 22nd edition! India's premier college
             cultural and technical extravaganza. Organized by students and the
             D.S.W. office, Moksha-Innovison promises an unparalleled experience
-            amidst the vibrant campus of N.S.U.T. At Moksha-Innovision, we
+            amidst the vibrant campus of NSUT At Moksha-Innovision, we
             prioritize the user experience above all else, ensuring that every
             guest leaves with unforgettable memories. With our commitment to
             excellence, we spare no effort to provide you with the best three

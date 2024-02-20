@@ -17,10 +17,12 @@
 .acc_p{
     background-color: #5de1e6;
     box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
-    width: 200px;
+    width: 230px;
     font-weight: bolder;
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
 }
 .acc_p_a{
     background-color: black;
