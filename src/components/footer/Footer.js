@@ -4,11 +4,11 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 
-function Footer() {
+function Footer(props) {
   const hang1="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/hang_1.png";
   const hang2="https://mokshainnovision.s3.eu-north-1.amazonaws.com/elementsMain/hang_3.png";
   return (
-    <div className="footerbg" id="footer">
+<div className="footerbg" id="footer" style={props.data !== "a" ? { backgroundColor: "#dc79ba" } : {}}>
       <div className="footer">
         <div>
           <a href="https://www.instagram.com/mokshansut/" target={"_blank"}>
@@ -26,11 +26,18 @@ function Footer() {
         </a>
         {/* <img src={hang2} className="hang1_foot" /> */}
 
-        <a href="mailto:moksha@nsut.ac.in" className="footer_btn">
+    {props.data!=="a"&&    <a href="mailto:moksha@nsut.ac.in" className="footer_btn">
           <a href="#history" style={{ textDecoration: "none", color: "white" }}>
             History
           </a>
         </a>
+}
+    {props.data==="a"&&    <a href="mailto:moksha@nsut.ac.in" className="footer_btn">
+          <a href="/events" style={{ textDecoration: "none", color: "white" }}>
+            Events
+          </a>
+        </a>
+}
         {/* <img src={hang1} className="hang1_foot" /> */}
 
         <div className="footer_text">

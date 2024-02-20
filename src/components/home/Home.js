@@ -2,17 +2,18 @@ import Spline from '@splinetool/react-spline'
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import "./Home.css"
-
+import gr from "./gifhome.gif"
 import 'animate.css';
 import { FaAngleDoubleDown } from "react-icons/fa";
 
 
 function Home() {
-  const gr="https://mokshainnovision.s3.eu-north-1.amazonaws.com/homegif.gif";
+
   const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/ww_MV.png";
 
   return (
     <div className='home'>
+      
         <div className='MI_home'>
 {/*  
         <div className='animate__animated animate__zoomInLeft'>MOKSHA-INNOVISION</div>

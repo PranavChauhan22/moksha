@@ -28,8 +28,8 @@ function Navbar() {
     onlyWidth>=1000?<div className="navbar">
 
         <div className="navbar_ele n1">
-          <a href="#history" style={{ textDecoration: "none", color: "white" }}>
-            HISTORY
+          <a href="/accommodation" style={{ textDecoration: "none", color: "white" }}>
+            Accommodation
           </a>
         </div>
       

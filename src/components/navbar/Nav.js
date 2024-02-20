@@ -31,9 +31,9 @@ export default function PopupDoc() {
          
             items: [
                 {
-                    label: 'History',
+                    label: 'Accommodation',
                     icon: 'pi pi-refresh',
-                    url:"#history"
+                    url:"/accommodation"
                     
                 },
                 {

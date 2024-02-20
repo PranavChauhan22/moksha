@@ -32,6 +32,7 @@ function App() {
       <Route exact path={"/events"} element={<Events/>}/>
       <Route exact path={"/mvportal"} element={<Portal/>}/>
       <Route exact path={"/leaderboard"} element={<Leaderboard/>}/>
+      <Route exact path={"/accommodation"} element={<Accomodation/>}/>
       
       
       </Routes>
