@@ -28,7 +28,7 @@ function Accomodation() {
         {/* <div className="cloud"></div>
         <div className="cloud1"></div> */}
         <div className="acc_head">
-          <div className="acc_p">Accommodations
+          <div className="acc_p">Accommodation
 </div>
           <div className="acc_s">
           Moksha-Innovision’s Team is committed to providing a pleasant and comfortable experience for all the enthusiastic participants opting for accommodations during the festival. Given the extensive participation, we have devised a set of procedural guidelines to ensure a smooth and glitch-free process.  
