@@ -40,7 +40,7 @@ function Accomodation() {
           <div className="acc_p_a">How to avail?</div>
           <div className="acc_s">
             1. Everybody willing to avail accommodation in Moksha-Innovision
-            must register here first and then proceed to further steps.{" "}
+            must register here first and then proceed to book now.{" "}
             <br></br><br></br>2. If you are part of your college contingent, then you can register through Contingent Leader (hereafter referred to as ‘CL’) of your college.{" "}
             <br></br><br></br>3. If your college has no CL, you can become one by registering yourself at{" "}
             <a href="https://www.mokshansut.com/cl" target={"_blank"}>
