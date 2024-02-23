@@ -19,6 +19,7 @@ import Events from "./components/events/Events";
 import Accomodation from "./components/accomodation/Accomodation";
 import Portal from "./components/portal/Portal";
 import Leaderboard from "./components/leaderboard/Leaderboard";
+import CLlead from "./components/leaderboard/CLlead";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
      <Router>
       <Routes>
       <Route exact path={"/"} element={<Rt/>}/>
-      <Route exact path={"/cl"} element={<CL/>}/>
+      <Route exact path={"/cl"} element={<CLlead/>}/>
       <Route exact path={"/cs"} element={<CS/>}/>
       <Route exact path={"/mv"} element={<Event/>}/>
       <Route exact path={"/events"} element={<Events/>}/>

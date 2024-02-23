@@ -31,34 +31,12 @@ function Accomodation() {
           <div className="acc_p">ACCOMMODATIONS AT MOKSHA-INNOVISION
 </div>
           <div className="acc_s">
-             Welcome to
-            Moksha-Innovision, NSUT's legendary cultural and technical
-            festival, now celebrating its 22nd edition! India's premier college
-            cultural and technical extravaganza. Organized by students and the
-            D.S.W. office, Moksha-Innovison promises an unparalleled experience
-            amidst the vibrant campus of NSUT At Moksha-Innovision, we
-            prioritize the user experience above all else, ensuring that every
-            guest leaves with unforgettable memories. With our commitment to
-            excellence, we spare no effort to provide you with the best three
-            days of your life. We cordially invite you to join us at
-            Moksha-Innovision 2024 for an unforgettable experience.
+          Moksha-Innovision’s Accommodation Team is committed to providing a pleasant and comfortable experience for all the enthusiastic participants opting for accommodations during the festival. Given the extensive participation, we have devised a set of procedural guidelines to ensure a smooth and glitch-free process.  
           </div>
           <a href="https://accommodations.mokshansut.com/" target={"_blank"} style={{textDecoration:"none"}}>
 
           <div className="acc_l">BOOK NOW!</div>
           </a>
-          <div className="acc_p_a">Contingent Leader</div>
-          <div className="acc_s">
-          The Contingent Leader (CL) serves as the connection between MV and their college for all accommodation-related queries, ensuring seamless communication among all contingent members. Upon successful completion of their duties, the CL receives a certificate of appreciation from MV, NSUT, Delhi, along with various exciting incentives. Seize the opportunity to receive a 10% discount by booking accommodation for a contingent of 20 or more members all at once!
-          <br></br><br></br>
-          <a href="https://www.mokshansut.com/cl" target={"_blank"}>
-          Click here to become the CL of your college
-            </a>{" "}
-          </div>
-          <div className="acc_p_b">Instructions</div>
-          <div className="acc_s">
-          Moksha-Innovision’s Accommodation Team is committed to providing a pleasant and comfortable experience for all the enthusiastic participants opting for accommodations during the festival. Given the extensive participation, we have devised a set of procedural guidelines to ensure a smooth and glitch-free process.  
-          </div>
           <div className="acc_p_a">How to avail?</div>
           <div className="acc_s">
             1. Everybody willing to avail accommodation in Moksha-Innovision
@@ -73,6 +51,16 @@ function Accomodation() {
             </a>{" "}
            
           </div>
+          <div className="acc_p_a">Contingent Leader</div>
+          <div className="acc_s">
+          The Contingent Leader (CL) serves as the connection between MV and their college for all accommodation-related queries, ensuring seamless communication among all contingent members. Upon successful completion of their duties, the CL receives a certificate of appreciation from MV, NSUT, Delhi, along with various exciting incentives. Seize the opportunity to receive a 10% discount by booking accommodation for a contingent of 20 or more members all at once!
+          <br></br><br></br>
+          <a href="https://www.mokshansut.com/cl" target={"_blank"}>
+          Click here to become the CL of your college
+            </a>{" "}
+          </div>
+         
+          
           
         </div>
 
