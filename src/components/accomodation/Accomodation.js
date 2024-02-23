@@ -28,10 +28,10 @@ function Accomodation() {
         {/* <div className="cloud"></div>
         <div className="cloud1"></div> */}
         <div className="acc_head">
-          <div className="acc_p">ACCOMMODATIONS AT MOKSHA-INNOVISION
+          <div className="acc_p">Accommodations
 </div>
           <div className="acc_s">
-          Moksha-Innovision’s Accommodation Team is committed to providing a pleasant and comfortable experience for all the enthusiastic participants opting for accommodations during the festival. Given the extensive participation, we have devised a set of procedural guidelines to ensure a smooth and glitch-free process.  
+          Moksha-Innovision’s Team is committed to providing a pleasant and comfortable experience for all the enthusiastic participants opting for accommodations during the festival. Given the extensive participation, we have devised a set of procedural guidelines to ensure a smooth and glitch-free process.  
           </div>
           <a href="https://accommodations.mokshansut.com/" target={"_blank"} style={{textDecoration:"none"}}>
 
