@@ -49,14 +49,11 @@ function Accomodation() {
           </a>
           <div className="acc_p_a">Contingent Leader</div>
           <div className="acc_s">
-            Join us as a Contingent Leader (CL) and be the link between your
-            college and Moksha-Innovision (MV) at N.S.U.T., Delhi. As a CL,
-            you'll be the go-to person for all accommodation queries, ensuring
-            seamless communication between MV and your college community. Earn a
-            certificate of appreciation from MV, N.S.U.T., Delhi, upon
-            successful completion of your duties, along with various exciting
-            incentives. Don't miss this opportunity to become a vital link in
-            one of India's most prestigious cultural festivals!
+          The Contingent Leader (CL) serves as the connection between MV and their college for all accommodation-related queries, ensuring seamless communication among all contingent members. Upon successful completion of their duties, the CL receives a certificate of appreciation from MV, NSUT, Delhi, along with various exciting incentives. Seize the opportunity to receive a 10% discount by booking accommodation for a contingent of 20 or more members all at once!
+          <br></br><br></br>
+          <a href="https://www.mokshansut.com/cl" target={"_blank"}>
+          Click here to become the CL of your college
+            </a>{" "}
           </div>
           <div className="acc_p_b">Instructions</div>
           <div className="acc_s">
