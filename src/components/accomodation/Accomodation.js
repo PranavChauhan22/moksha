@@ -28,7 +28,8 @@ function Accomodation() {
         {/* <div className="cloud"></div>
         <div className="cloud1"></div> */}
         <div className="acc_head">
-          <div className="acc_p">ACCOMMODATION at Netaji Subhas University of Technology, Delhi.</div>
+          <div className="acc_p">ACCOMMODATIONS AT MOKSHA-INNOVISION
+</div>
           <div className="acc_s">
              Welcome to
             Moksha-Innovision, NSUT's legendary cultural and technical
@@ -42,9 +43,9 @@ function Accomodation() {
             days of your life. We cordially invite you to join us at
             Moksha-Innovision 2024 for an unforgettable experience.
           </div>
-          <a href="https://accommodations.mokshansut.com/" target={"_blank"}>
+          <a href="https://accommodations.mokshansut.com/" target={"_blank"} style={{textDecoration:"none"}}>
 
-          <div className="acc_l">BUY NOW</div>
+          <div className="acc_l">BOOK NOW!</div>
           </a>
           <div className="acc_p_a">Contingent Leader</div>
           <div className="acc_s">
@@ -59,29 +60,21 @@ function Accomodation() {
           </div>
           <div className="acc_p_b">Instructions</div>
           <div className="acc_s">
-            To ensure a comfortable experience for the eager participants of
-            Moksha-Innovision, the Hospitality Department of MV is dedicated to
-            offering convenient accommodation options during the festival. Given
-            the extensive participation, we've devised a set of procedural
-            guidelines to ensure a smooth and glitch-free process. Allow us to
-            guide you through the steps!
+          Moksha-Innovision’s Accommodation Team is committed to providing a pleasant and comfortable experience for all the enthusiastic participants opting for accommodations during the festival. Given the extensive participation, we have devised a set of procedural guidelines to ensure a smooth and glitch-free process.  
           </div>
           <div className="acc_p_a">How to avail?</div>
           <div className="acc_s">
             1. Everybody willing to avail accommodation in Moksha-Innovision
             must register here first and then proceed to further steps.{" "}
-            <br></br><br></br>2. All participants have to contact the Contingent Leader
-            (hereafter referred to as ‘CL’) of their college; the details of
-            whom would be made available to you once the CL is decided.{" "}
-            <br></br><br></br>3. The registration for Contingent Leader has started. If
-            your college has no CL, you can register yourself at{" "}
+            <br></br><br></br>2. If you are part of your college contingent, then you can register through Contingent Leader (hereafter referred to as ‘CL’) of your college.{" "}
+            <br></br><br></br>3. If your college has no CL, you can become one by registering yourself at{" "}
             <a href="https://www.mokshansut.com/cl" target={"_blank"}>
               https://www.mokshansut.com/cl
             </a>{" "}
-            <br></br><br></br>4. CL will have to finalise the contingent before the given
-            deadline and within the allotted contingent limit
-            <br></br><br></br>
-            5. In case your college does not have a CL, the group is supposed to choose one leader amongst themselves who will be representing the entire group.
+            <br></br><br></br>4. For more details, refer to FAQ’s at <a href="https://accommodations.mokshansut.com/" target={"_blank"}>
+              MV Accommodations
+            </a>{" "}
+           
           </div>
           
         </div>
