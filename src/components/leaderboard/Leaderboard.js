@@ -13,8 +13,6 @@ import lgif from "./lead.gif";
 import data from "../events/data";
 export default function Leaderboard() {
   const [customers, setCustomers] = useState(null);
-  const [d, setD] = useState(1);
-  const [regs, setRegs] = useState(null);
 
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
@@ -35,14 +33,14 @@ export default function Leaderboard() {
 
   const processData = (data, setData, vr) => {
     if (data.message) {
-      const respD = vr=="a"?data.message.slice(1):data.reg.slice(1);
+      const respD = vr == "a" ? data.message.slice(1) : data.reg.slice(1);
       const arrayOfObjects = respD.map(([name, points]) => ({
         name,
         points: parseInt(points),
       }));
-  
+
       arrayOfObjects.sort((a, b) => b.points - a.points);
-  
+
       arrayOfObjects.slice(0, 3).forEach((entry, index) => {
         switch (index) {
           case 0:
@@ -58,35 +56,36 @@ export default function Leaderboard() {
             break;
         }
       });
-  
+
       setData(arrayOfObjects);
     }
   };
-  
+
   const GetLeaderboard = async () => {
     try {
-      const response = await fetch("https://moksha-9bmv.onrender.com/getLeaderboard", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-  
+      const response = await fetch(
+        "https://moksha-9bmv.onrender.com/getLeaderboard",
+        // "http://localhost:3002/getLeaderboard",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
       const data = await response.json();
-      processData(data, setCustomers,"a"); // Assuming this is for customers
-      processData(data, setRegs,"b"); // Assuming this is for registrations
+      processData(data, setCustomers, "a"); // Assuming this is for customers
     } catch (error) {
       console.error("Error:", error);
     }
   };
-  
+
   const [selectedCustomer, setSelectedCustomer] = useState(null);
 
   useEffect(() => {
     GetLeaderboard();
   }, []);
-  
-  
 
   const onGlobalFilterChange = (event) => {
     const value = event.target.value;
@@ -114,7 +113,7 @@ export default function Leaderboard() {
   };
 
   const header = renderHeader();
-  if (!customers || !regs) {
+  if (!customers ) {
     return <Loader />;
   }
   return (
@@ -127,11 +126,10 @@ export default function Leaderboard() {
         <img src={lgif} className="lgif" />
       </div>
       <div className="tabs_l">
-        <div className="tabs_l_h" onClick={()=>setD(1)}>Society Leaderboard</div>
-        <div className="tabs_l_b" onClick={()=>setD(2)}>Event Leaderboard</div>
+        <div className="tabs_l_h">Society Leaderboard</div>
       </div>
       <DataTable
-        value={d==1?customers:regs}
+        value={customers}
         paginator
         rows={10}
         header={header}
@@ -172,7 +170,7 @@ export default function Leaderboard() {
           }}
         ></Column>
       </DataTable>
-      <Graph Mdata={d==1?customers:regs} />
+      <Graph Mdata={customers} />
     </div>
   );
 }

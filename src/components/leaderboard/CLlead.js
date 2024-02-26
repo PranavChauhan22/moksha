@@ -42,7 +42,7 @@ export default function CLlead() {
   
       arrayOfObjects.sort((a, b) => b.points - a.points);
   
-      arrayOfObjects.slice(0, 3).forEach((entry, index) => {
+      arrayOfObjects.slice(0, 5).forEach((entry, index) => {
         switch (index) {
           case 0:
             entry.name = "🥇 " + entry.name;
@@ -52,6 +52,12 @@ export default function CLlead() {
             break;
           case 2:
             entry.name = "🥉 " + entry.name;
+            break;
+          case 3:
+            entry.name = "🎖️ " + entry.name;
+            break;
+          case 4:
+            entry.name = "🏅 " + entry.name;
             break;
           default:
             break;
@@ -65,7 +71,7 @@ export default function CLlead() {
   const GetLeaderboard = async () => {
     try {
       const response = await fetch("https://moksha-9bmv.onrender.com/getCLLeaderboard", {
-    //   const response = await fetch("http://localhost:3002/getCLLeaderboard", {
+      // const response = await fetch("http://localhost:3002/getCLLeaderboard", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
