@@ -7,10 +7,10 @@ import SignUpModal from "../signup/SignUpModal";
 import { encode, decode } from "string-encode-decode";
 import { jwtDecode } from "jwt-decode";
 import Loader from "../loader/Loader";
-
+import mokshalogo from "./mokshalogo.png"
 function Event() {
   const logo =
-    "https://mokshainnovision.s3.eu-north-1.amazonaws.com/mokshalogo.png";
+    mokshalogo;
   const [TOKEN, setTOKEN] = useState(null);
   const [eventData, setEventData] = useState(null);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = React.useState(false);

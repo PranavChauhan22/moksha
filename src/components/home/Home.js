@@ -5,11 +5,11 @@ import "./Home.css"
 import gr from "./gifhome.gif"
 import 'animate.css';
 import { FaAngleDoubleDown } from "react-icons/fa";
-
+import logo from "./ww_MV.png"
 
 function Home() {
 
-  const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/ww_MV.png";
+  // const logo="https://mokshainnovision.s3.eu-north-1.amazonaws.com/ww_MV.png";
 
   return (
     <div className='home'>

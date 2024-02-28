@@ -1,10 +1,11 @@
 import React from 'react'
 import "./Timeline.css"
-
+import img from "./timeline.png"
+import cds from "./SCROLL.gif"
+import head from "./timeline_txt.png"
 function Timeline() {
-  const img="https://mokshainnovision.s3.eu-north-1.amazonaws.com/images/timeline.png";
-  const cds="https://mokshainnovision.s3.eu-north-1.amazonaws.com/gifs/SCROLL.gif";
-  const head="https://mokshainnovision.s3.eu-north-1.amazonaws.com/strips/timeline_txt.png"
+
+  
   return (
     <div className='timeline' id="history">
       <img src={head} className="head_txt"/>
