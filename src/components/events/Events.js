@@ -138,7 +138,7 @@ function Events() {
               <div key={index} style={{ margin: "30px" }}>
                 {randomComponent === "Eventmicro" && (
                   <a
-                    href={`/mv?${queryStringParams}`}
+                    href={event[4]==="InnoHacks"?'https://innohacks.devfolio.co/':`/mv?${queryStringParams}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
@@ -148,8 +148,8 @@ function Events() {
                 )}
                 {randomComponent === "Eventmic1" && (
                   <a
-                    href={`/mv?${queryStringParams}`}
-                    target="_blank"
+                  href={event[4]==="InnoHacks"?'https://innohacks.devfolio.co/':`/mv?${queryStringParams}`}
+                  target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
                   >
@@ -158,8 +158,8 @@ function Events() {
                 )}
                 {randomComponent === "Eventmic2" && (
                   <a
-                    href={`/mv?${queryStringParams}`}
-                    target="_blank"
+                  href={event[4]==="InnoHacks"?'https://innohacks.devfolio.co/':`/mv?${queryStringParams}`}
+                  target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
                   >
