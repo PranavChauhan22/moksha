@@ -13,6 +13,7 @@
     "animate.css": "^4.1.1",
     "axios": "^1.6.3",
     "chart.js": "^4.4.1",
+    "file-saver": "^2.0.5",
     "googleapis": "^95.0.0",
     "jwt-decode": "^4.0.0",
     "primereact": "^10.3.3",

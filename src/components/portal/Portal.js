@@ -6,6 +6,9 @@ import DataViewer from "./DataViewer"; // Import the DataViewer component
 import "./Portal.css";
 import pgif from "./pgif.gif";
 import fgif from "./fgif.gif";
+import { saveAs } from "file-saver";
+
+
 function Portal() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,19 +30,36 @@ function Portal() {
     const csvContent =
       "data:text/csv;charset=utf-8," +
       data.map((row) => Object.values(row).join(",")).join("\n");
-    return encodeURI(csvContent);
+     
+    return csvContent;
   };
+
+  // const downloadCSV = (csvData) => {
+  //   const link = document.createElement("a");
+  //   link.setAttribute("href", csvData);
+  //   link.setAttribute("download", result + ".csv");
+  //   document.body.appendChild(link);
+  //   link.click();
+  // };
+
 
   const downloadCSV = (csvData) => {
+    const blob = new Blob([csvData], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.setAttribute("href", csvData);
+    link.setAttribute("href", url);
     link.setAttribute("download", result + ".csv");
+    link.style.display = "none";
     document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url); // Release the object URL
   };
-
+  
+  
   // Assuming this function is within a React component
   const handleDownloadCSV = () => {
+    console.log(fetchedData);
     const csvData = convertToCSV(fetchedData);
     downloadCSV(csvData);
   };
