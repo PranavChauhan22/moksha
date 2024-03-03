@@ -16,6 +16,7 @@ function Event() {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = React.useState(false);
   const [loading, setLoading] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [val, setval] = useState(false)
 
   function formatText(content) {
     const sections = content.split(/(?=\$+\d{1,2}\)|(?<!\$)\d{1,2}\)|(?<!\$)\d{1,2}\.\s*\$\$)/);
@@ -96,6 +97,9 @@ function Event() {
     if (params.UIMV) {
       const myArray = JSON.parse(params.UIMV);
       const decodedArray = myArray.map((item) => decode(item));
+      if(decodedArray.length===11){
+        setval(true);
+      }
       console.log(decodedArray);
       setEventData(decodedArray);
       // Now you have your array in the component state or can use it as needed.
@@ -106,7 +110,7 @@ function Event() {
   useEffect(() => {
 
     if (TOKEN && eventData) {
-      checkUserEvent(TOKEN, eventData[4]);
+      checkUserEvent(TOKEN, eventData[1]);
     }
   }, [eventData, TOKEN]);
 
@@ -138,7 +142,7 @@ function Event() {
         },
         body: JSON.stringify({
           data: formData,
-          event: eventData[4],
+          event: eventData[1],
           id: TOKEN,
         }),
       });
@@ -181,7 +185,7 @@ function Event() {
   if ((eventData === null && result === null)||( loading)) {
     return <Loader/>
   }  else {
-    const formFields = eventData[12].split(",").map((field, index) => {
+     const formFields = eventData[val?10:12].split(",").map((field, index) => {
       // Check if the field ends with an asterisk
       const isCompulsory = field.trim().endsWith("*");
     
@@ -252,23 +256,23 @@ function Event() {
           </div>
         </Modal>
 
-        <div className="events_slip">{eventData[5]}</div>
+        <div className="events_slip">{val?eventData[2]:eventData[5]}</div>
 
         <div className="event-box">
-          <img src={eventData[7]} className="event_img" />
+          <img src={val?eventData[8]:eventData[7]} className="event_img" />
         </div>
         <div className="event-h">
-          {eventData[4]} presented by {eventData[1]} in Moksha - Innovision 2024
+          {val?eventData[1]:eventData[4]+" presented by "+eventData[1]+" in Moksha - Innovision 2024 "}
         </div>
         <div className="eventsl">
           <div className={"eventl " + (rr ? "open" : "")} key={"1"}>
             <div className="event-question" onClick={() => toggleFAQ()}>
               {" "}
-              Rules & Regulations
+            {val?"Description":"Rules & Regulations"}
             </div>
             <div className="event-answer">
               
-              {formatText(eventData[6])}
+              {val?eventData[3]:formatText(eventData[6])}
 
               
             </div>
@@ -276,8 +280,8 @@ function Event() {
         </div>
 
         <div className="event-b">
-          For queries, contact: {eventData[8]} at {eventData[9]} or{" "}
-          {eventData[10]} at {eventData[11]}
+          For queries, contact: {val?eventData[4]:eventData[8]} at {val?eventData[5]:eventData[9]} or{" "}
+          {val?eventData[6]:eventData[10]} at {val?eventData[7]:eventData[11]}
         </div>
 
         <div className="form-container"></div>

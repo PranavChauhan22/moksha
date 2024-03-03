@@ -10,7 +10,7 @@ export default function Eventgall(props) {
     useEffect(() => {
         // Assuming props.imgs is an array of arrays
         const imagesArray = props.imgs.map(innerArray => ({
-            itemImageSrc: innerArray[7], // Assuming 7th item is the image URL
+            itemImageSrc: innerArray[props.val==="1"?8:7], // Assuming 7th item is the image URL
             
         }));
     

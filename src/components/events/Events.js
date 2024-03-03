@@ -9,10 +9,12 @@ import queryString from "query-string";
 import { encode } from "string-encode-decode";
 import Loader from "../loader/Loader";
 import { Toast } from "primereact/toast";
+import { Link } from "react-router-dom";
 
 function Events() {
   const toast = useRef(null);
   const [eventsData, setEventsData] = useState([]);
+  const [miniData, setMiniData] = useState([]);
   const [selectedFilter, setSelectedFilter] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [day, setDay] = useState("");
@@ -22,11 +24,13 @@ function Events() {
       try {
         const response = await fetch(
           "https://moksha-9bmv.onrender.com/getEvents"
+          // "http://localhost:3002/getEvents"
         );
         const data = await response.json();
         const newData = data.message.slice(1);
         const reqData = newData.filter((array) => array[15] !== "NO");
         setEventsData(reqData);
+
         // showSuccess(); // Call showSuccess after data is fetched
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -41,7 +45,7 @@ function Events() {
       severity: "info",
       summary: "Important Info",
       sticky: true,
-    key:"1",
+      key: "1",
       detail: (
         <a
           href="https://innohacks.devfolio.co/"
@@ -51,7 +55,7 @@ function Events() {
         >
           Register for InnoHacks (The greatest hack of all time)
         </a>
-      )
+      ),
     });
   };
 
@@ -76,6 +80,28 @@ function Events() {
           <img src={cds} className="e_m_wrap" alt="cds" />
           <div className="e_h_head">EVENTS</div>
           <img src={cds} className="e_m_wrap" alt="cds" />
+        </div>
+        <div className="min-f-gall">
+          {/* <div className="anime-fest">ANIME FEST</div> */}
+          <Link to={"/minifest"} style={{textDecoration:"none",color:"black"}} target={"_blank"}>
+
+          <div className="sports-fest">🔍 MINI FESTS</div>
+          </Link>
+
+          {/* <div className="creator-fest">CREATOR FEST</div> */}
+          <a
+                    href={
+              
+                        "https://innohacks.devfolio.co/"
+                      
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    
+          <div className="hack-fest">🔍 HACKATHON</div>
+          </a>
         </div>
         <Eventgall imgs={eventsData} />
         <div className="filter-section">
@@ -138,7 +164,11 @@ function Events() {
               <div key={index} style={{ margin: "30px" }}>
                 {randomComponent === "Eventmicro" && (
                   <a
-                    href={event[4]==="InnoHacks"?'https://innohacks.devfolio.co/':`/mv?${queryStringParams}`}
+                    href={
+                      event[4] === "InnoHacks"
+                        ? "https://innohacks.devfolio.co/"
+                        : `/mv?${queryStringParams}`
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
@@ -148,8 +178,12 @@ function Events() {
                 )}
                 {randomComponent === "Eventmic1" && (
                   <a
-                  href={event[4]==="InnoHacks"?'https://innohacks.devfolio.co/':`/mv?${queryStringParams}`}
-                  target="_blank"
+                    href={
+                      event[4] === "InnoHacks"
+                        ? "https://innohacks.devfolio.co/"
+                        : `/mv?${queryStringParams}`
+                    }
+                    target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
                   >
@@ -158,8 +192,12 @@ function Events() {
                 )}
                 {randomComponent === "Eventmic2" && (
                   <a
-                  href={event[4]==="InnoHacks"?'https://innohacks.devfolio.co/':`/mv?${queryStringParams}`}
-                  target="_blank"
+                    href={
+                      event[4] === "InnoHacks"
+                        ? "https://innohacks.devfolio.co/"
+                        : `/mv?${queryStringParams}`
+                    }
+                    target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
                   >

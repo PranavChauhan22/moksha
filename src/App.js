@@ -20,6 +20,8 @@ import Accomodation from "./components/accomodation/Accomodation";
 import Portal from "./components/portal/Portal";
 import Leaderboard from "./components/leaderboard/Leaderboard";
 import CLlead from "./components/leaderboard/CLlead";
+import MF from "./components/events/MF";
+import Sponsor from "./components/sponsors/Sponsor";
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
       <Route exact path={"/mvportal"} element={<Portal/>}/>
       <Route exact path={"/leaderboard"} element={<Leaderboard/>}/>
       <Route exact path={"/accommodation"} element={<Accomodation/>}/>
+      <Route exact path={"/minifest"} element={<MF/>}/>
       
       
       </Routes>

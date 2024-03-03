@@ -38,6 +38,54 @@
     /* padding-left: 50px; */
     /* padding-right: 50px; */
   }
+
+  .anime-fest{
+    background-color: #cb6ce5;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 #ff3b78;
+    width: 180px;
+    padding: 10px;
+    font-weight: bolder;
+    height: 40px;
+    margin:10px
+  }
+  .sports-fest{
+    background-color: rgb(44, 195, 242);
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 yellow;
+    width: 180px;
+    padding: 10px;
+    font-weight: bolder;
+    height: 40px;
+    margin:10px
+  }
+  
+  .creator-fest{
+    background-color: rgb(255, 184, 5);
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 #3baaff;
+    width: 180px;
+    padding: 10px;
+    font-weight: bolder;
+    height: 40px;
+    margin:10px
+  }
+  .min-f-gall{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .hack-fest{
+    background-color: #e56c6c;
+    box-shadow: 0 0 0 2px black, 8px 8px 0 0 #ff3b78;
+    width: 180px;
+    padding: 10px;
+    font-weight: bolder;
+    height: 40px;
+    margin:10px
+  }
   
   #filterDropdown{
     background-color: #cb6ce5;

@@ -1,0 +1,140 @@
+.s_str{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sgif
+{
+    width: 50vw;
+    padding-top: 10px;
+    /* height: 100px; */
+    margin-bottom: 30px;
+    object-fit: contain;
+}
+.sponsor{
+    background-color: black;
+    min-height: 100vh;
+}
+.neon-blue {
+    --neon: #35ff7b;
+    --neon-glow: #2df490;
+  }
+  
+.neon-yellow {
+    --neon: #d5f813;
+    --neon-glow: #f9ff51;
+  }
+  
+.s_txt{
+    border: 5px solid var(--neon);
+    font-size: 20px;
+    font-weight: bolder;
+    width: 200px;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    box-shadow: 
+      0 0 10px var(--neon-glow), 
+      inset 0 0 10px var(--neon-glow);
+      margin: auto;
+   
+       
+      
+}
+@supports (background: color(display-p3 1 1 1)) {
+    @media (dynamic-range: high) {
+      .neon-red {
+        --neon-glow: color(display-p3 1 0 0);
+      }
+  
+      .neon-pink {
+        --neon-glow: color(display-p3 1 0 1);
+      }
+  
+      .neon-purple {
+        --neon-glow: color(display-p3 0 0 1);
+      }
+  
+      .neon-blue {
+        --neon-glow: color(display-p3 0 1 1);
+      }
+  
+      .neon-green {
+        --neon-glow: color(display-p3 0 1 0);
+      }
+  
+      .neon-yellow {
+        --neon-glow: color(display-p3 1 1 0);
+      }
+  
+      .neon-white {
+        --neon-glow: color(display-p3 1 1 1);
+      }
+    }
+  }
+  
+.lg{
+  width: 150px;
+
+  
+}
+.txt_s_s{
+  border: 5px solid var(--neon);
+    font-size: 18px;
+    border-radius: 10px;
+
+    font-weight: bolder;
+    width: 250px;
+    color: white;
+    padding: 10px;
+    box-shadow: 
+      0 0 5px var(--neon-glow), 
+      inset 0 0 5px var(--neon-glow);
+      animation: animate  
+                1s linear infinite; 
+                margin-bottom: -15px;
+
+}
+
+.logo_e{
+  border: 5px solid var(--neon);
+    font-size: 18px;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    font-weight: bolder;
+    /* width: 200px; */
+    color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+    box-shadow: 
+      0 0 5px var(--neon-glow), 
+      inset 0 0 5px var(--neon-glow);
+      margin: 30px;
+      
+}
+
+@keyframes animate { 
+  0% { 
+      opacity: 0.2; 
+  } 
+
+  50% { 
+      opacity: 1; 
+  } 
+
+  100% { 
+      opacity: 0.2; 
+  } 
+} 
+
+.logos_s{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
