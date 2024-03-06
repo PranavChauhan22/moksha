@@ -35,8 +35,8 @@ function Navbar() {
       
    
         <div className="navbar_ele n2" style={{ left: onlyWidth / 2.5 }}>
-          <a href="#footer" style={{ textDecoration: "none", color: "white" }}>
-            CONTACT
+          <a href="/sponsors" style={{ textDecoration: "none", color: "white" }}>
+            SPONSORS
           </a>
         </div>
       
