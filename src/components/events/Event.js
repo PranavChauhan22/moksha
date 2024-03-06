@@ -299,37 +299,15 @@ function Event() {
               {TOKEN ? (
                 <>
                   {result === "no" ? (
-                    <form className="event-form-f" onSubmit={handleSubmit}>
-                      {formFields}
-                      <button type="submit" className="event-submit">
-                        Submit
-                      </button>
-                    </form>
+                                      <div>Registrations are closed!</div>
+
                   ) : (
                     <div>You have already registered for the event!</div>
                   )}
                 </>
               ) : (
                 <>
-                  <div
-                    className="navbar_ele n3"
-                    onClick={() => setIsSignUpModalOpen(true)}
-                    style={{
-                      cursor: "pointer",
-                      backgroundColor: "black",
-                      padding: "20px",
-                      width: "120px",
-                      textAlign: "center",
-                      margin: "auto",
-                    }}
-                  >
-                    SIGN-UP
-                  </div>
-
-                  <SignUpModal
-                    isOpen={isSignUpModalOpen}
-                    onClose={() => setIsSignUpModalOpen(false)}
-                  />
+                  <div>Registrations are closed!</div>
                 </>
               )}
             </div>
